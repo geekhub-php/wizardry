@@ -1,6 +1,6 @@
 <?php
 
-namespace Wizardry\WizardryMainBundle;
+namespace Wizardry\MainBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
