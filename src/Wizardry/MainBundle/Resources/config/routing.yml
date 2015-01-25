@@ -1,0 +1,3 @@
+hello_page:
+    pattern:  /hello/{name}
+    defaults: { _controller: WizardryMainBundle:Default:index }
