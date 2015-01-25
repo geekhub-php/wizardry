@@ -1,6 +1,6 @@
 <?php
 
-namespace Wizardry\WizardryBundle\Controller;
+namespace Wizardry\MainBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
