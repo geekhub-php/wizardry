@@ -14,7 +14,6 @@ class Set {
 
     /**
      * @ODM\Id
-     * @ODM\ReferenceOne(targetDocument="Block", inversedBy="setContain")
      */
     private $id;
 
@@ -34,14 +33,14 @@ class Set {
     private $shortName;
 
     /**
-     * @ODM\Field(type="string")
+     * @ODM\ReferenceMany(targetDocument="Card")
      */
-    private $cardContain;
+    private $cardContain = [];
 
     /**
      * Set id
      *
-     * @param Wizardry\MainBundle\Document\Block $id
+     * @param \Wizardry\MainBundle\Document\Block $id
      * @return self
      */
     public function setId(\Wizardry\MainBundle\Document\Block $id)
@@ -53,7 +52,7 @@ class Set {
     /**
      * Get id
      *
-     * @return Wizardry\MainBundle\Document\Block $id
+     * @return \Wizardry\MainBundle\Document\Block $id
      */
     public function getId()
     {
@@ -146,5 +145,29 @@ class Set {
     public function getCardContain()
     {
         return $this->cardContain;
+    }
+    public function __construct()
+    {
+        $this->cardContain = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add cardContain
+     *
+     * @param Wizardry\MainBundle\Document\Card $cardContain
+     */
+    public function addCardContain(\Wizardry\MainBundle\Document\Card $cardContain)
+    {
+        $this->cardContain[] = $cardContain;
+    }
+
+    /**
+     * Remove cardContain
+     *
+     * @param Wizardry\MainBundle\Document\Card $cardContain
+     */
+    public function removeCardContain(\Wizardry\MainBundle\Document\Card $cardContain)
+    {
+        $this->cardContain->removeElement($cardContain);
     }
 }

@@ -13,7 +13,6 @@ class Card {
 
     /**
      * @ODM\Id
-     * @ODM\ReferenceOne(targetDocument="Set", inversedBy="cardContain")
      */
     private $id;
 
@@ -80,7 +79,7 @@ class Card {
     /**
      * Set id
      *
-     * @param Wizardry\MainBundle\Document\Set $id
+     * @param \Wizardry\MainBundle\Document\Set $id
      * @return self
      */
     public function setId(\Wizardry\MainBundle\Document\Set $id)
@@ -92,7 +91,7 @@ class Card {
     /**
      * Get id
      *
-     * @return Wizardry\MainBundle\Document\Set $id
+     * @return \Wizardry\MainBundle\Document\Set $id
      */
     public function getId()
     {

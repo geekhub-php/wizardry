@@ -21,9 +21,9 @@ class Block {
     private $name;
 
     /**
-     * @ODM\Field(type="string")
+     * @ODM\ReferenceMany(targetDocument="Set")
      */
-    private $setContain;
+    private $setContain = [];
 
     /**
      * Get id
@@ -77,5 +77,29 @@ class Block {
     public function getSetContain()
     {
         return $this->setContain;
+    }
+    public function __construct()
+    {
+        $this->setContain = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add setContain
+     *
+     * @param Wizardry\MainBundle\Document\Set $setContain
+     */
+    public function addSetContain(\Wizardry\MainBundle\Document\Set $setContain)
+    {
+        $this->setContain[] = $setContain;
+    }
+
+    /**
+     * Remove setContain
+     *
+     * @param Wizardry\MainBundle\Document\Set $setContain
+     */
+    public function removeSetContain(\Wizardry\MainBundle\Document\Set $setContain)
+    {
+        $this->setContain->removeElement($setContain);
     }
 }
