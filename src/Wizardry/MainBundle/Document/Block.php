@@ -4,7 +4,10 @@ namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Wizardry\MainBundle\Document\Set;
-use Wizardry\MainBundle\Document\Card;
+
+    /**
+     * @ODM\Document(collection="Block")
+     */
 
 class Block {
     /**

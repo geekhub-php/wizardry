@@ -6,6 +6,10 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Wizardry\MainBundle\Document\Block;
 use Wizardry\MainBundle\Document\Card;
 
+    /**
+     * @ODM\Document(collection="Set")
+     */
+
 class Set {
 
     /**
