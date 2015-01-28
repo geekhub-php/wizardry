@@ -23,5 +23,59 @@ class Block {
     /**
      * @ODM\Field(type="string")
      */
-    private $setContain
+    private $setContain;
+
+    /**
+     * Get id
+     *
+     * @return id $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return self
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string $name
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set setContain
+     *
+     * @param string $setContain
+     * @return self
+     */
+    public function setSetContain($setContain)
+    {
+        $this->setContain = $setContain;
+        return $this;
+    }
+
+    /**
+     * Get setContain
+     *
+     * @return string $setContain
+     */
+    public function getSetContain()
+    {
+        return $this->setContain;
+    }
 }
