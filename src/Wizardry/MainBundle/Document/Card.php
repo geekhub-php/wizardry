@@ -3,15 +3,18 @@
 namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+use Wizardry\MainBundle\Document\Set;
+use Wizardry\MainBundle\Document\Block;
 
 /**
- * @ODM\Document
+ * @ODM\Document(collection="card")
  */
 
 class Card {
 
     /**
      * @ODM\Id
+     * @ODM\ReferenceOne(targetDocument="Set", inversedBy="cardContain")
      */
     private $id;
 
@@ -23,7 +26,12 @@ class Card {
     /**
      * @ODM\Field(type="string")
      */
-    private $manacost;
+    private $manaCost;
+
+    /**
+     * @ODM\Field(type="int")
+     */
+    private $convertedManaCost;
 
     /**
      * @ODM\Field(type="file")
@@ -38,7 +46,7 @@ class Card {
     /**
      * @ODM\Field(type="string")
      */
-    private $subtype;
+    private $subType;
 
     /**
      * @ODM\Field(type="string")
