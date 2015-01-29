@@ -32,7 +32,7 @@ class Card {
     private $convertedManaCost;
 
     /**
-     * @ODM\Field(type="file")
+     * @ODM\Field(type="string")
      */
     private $image;
 

@@ -11,3 +11,15 @@ Wizardry\MainBundle\Document\Card:
     power: 2
     toughness: 1
     artist: Ralph Horsley
+
+Wizardry\MainBundle\Document\Set:
+  Set{1..20}:
+    name: Magic 2015
+    number: 15
+    shortName: m15
+    cardContain: [@Card1, @Card2, @Card3, @Card4]
+
+Wizardry\MainBundle\Document\Block:
+  Block{1..20}:
+    name: Khans of Tarkir
+    setContain: [@Set1, @Set2, @Set3, @Set4]
