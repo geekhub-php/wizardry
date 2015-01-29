@@ -1,0 +1,13 @@
+Wizardry\MainBundle\Document\Card:
+  Card{1..20}:
+    name: Ballyrush Banneret
+    manaCost: 1W
+    convertedManaCost: 2
+    type: Creature
+    subType: Kithkin Soldier
+    rarity: Mystic Rare
+    description: Kithkin spells and Soldier spells you cast cost 1 less to cast.
+    artDescription: Only wool from the side of the springjack turned most often to the sun can be woven into kithkin battle standards. Jackherds record every movement of their woolly-jacks until shearing.
+    power: 2
+    toughness: 1
+    artist: Ralph Horsley
