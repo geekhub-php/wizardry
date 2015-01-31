@@ -2,6 +2,7 @@
 
 namespace Wizardry\ApiBundle\Controller;
 
+use Doctrine\ODM\MongoDB\DocumentNotFoundException;
 use FOS\RestBundle\Controller\Annotations\View;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -34,6 +35,10 @@ class CardsController extends Controller
         $singleCard = $this->get('doctrine_mongodb')
             ->getRepository('WizardryMainBundle:Card')
             ->find($card);
+
+        if (!$singleCard) {
+            throw $this->createNotFoundException();
+        }
 
         return [
             'card' => $singleCard
