@@ -20,7 +20,10 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Wizardry\ApiBundle\WizardryApiBundle()
+            new Wizardry\ApiBundle\WizardryApiBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -71,3 +71,8 @@ fos_rest:
     routing_loader:
          default_format: json
 
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
