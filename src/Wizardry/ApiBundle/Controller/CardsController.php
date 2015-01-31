@@ -23,4 +23,20 @@ class CardsController extends Controller
         ];
 
     }
+
+    /**
+     * @View()
+     * @param $card
+     * @return array
+     */
+    public function getCardAction($card)
+    {
+        $singleCard = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Card')
+            ->find($card);
+
+        return [
+            'card' => $singleCard
+        ];
+    }
 }
