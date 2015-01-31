@@ -5,3 +5,7 @@ _wizardry:
 _wizardry_api:
     resource : "@WizardryApiBundle/Resources/config/routing.yml"
     prefix: /api
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
