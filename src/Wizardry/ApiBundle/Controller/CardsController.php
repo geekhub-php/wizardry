@@ -2,14 +2,19 @@
 
 namespace Wizardry\ApiBundle\Controller;
 
-use Doctrine\ODM\MongoDB\DocumentNotFoundException;
 use FOS\RestBundle\Controller\Annotations\View;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CardsController extends Controller
 {
 
     /**
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Returns a collection of Cards"
+     * )
+     *
      * @return array
      * @View()
      */
@@ -26,8 +31,12 @@ class CardsController extends Controller
     }
 
     /**
+     * @ApiDoc(
+     *  description="Returns a single Card"
+     * )
+     *
      * @View()
-     * @param $card
+     * @param string $card Card ID
      * @return array
      */
     public function getCardAction($card)
