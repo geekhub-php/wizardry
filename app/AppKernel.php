@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Wizardry\ApiBundle\WizardryApiBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\AdminBundle\SonataAdminBundle()
         );
