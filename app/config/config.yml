@@ -70,6 +70,9 @@ fos_rest:
 
     routing_loader:
          default_format: json
+    exception:
+            codes:
+                'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
 
 sonata_block:
     default_contexts: [cms]
