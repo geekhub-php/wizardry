@@ -1,0 +1,4 @@
+services:
+#    wizardry_user.example:
+#        class: Wizardry\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
