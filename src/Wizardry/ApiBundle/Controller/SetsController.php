@@ -46,6 +46,11 @@ class SetsController extends Controller
             ->getRepository('WizardryMainBundle:Set')
             ->find($id);
 
+
+        if (!$set) {
+            throw $this->createNotFoundException();
+        }
+
         return [
             'set' => $set
         ];
