@@ -12,11 +12,25 @@ class CardAdmin extends Admin
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
+        // get the current Image instance
+        $image = $this->getSubject();
+
+        // use $fileFieldOptions so we can add other options to the field
+        $fileFieldOptions = array('required' => false);
+        if ($image && ($webPath = $image->getWebPath())) {
+            // get the container so the full path to the image can be set
+            $container = $this->getConfigurationPool()->getContainer();
+            $fullPath = $container->get('request')->getBasePath().'/'.$webPath;
+
+            // add a 'help' option containing the preview's img tag
+            $fileFieldOptions['help'] = '<img src="'.$fullPath.'" class="admin-preview" />';
+        }
+
         $formMapper
             ->add('name', 'text', array('label' => 'Card Name'))
             ->add('manaCost', 'text', array('label' => 'Mana Cost'))
             ->add('convertedManaCost', 'text', array('label' => 'Converted Mana Cost'))
-            ->add('file', 'file', array('label' => 'Image link'))
+            ->add('file', 'file', ['label' => 'Image'], $fileFieldOptions)
             ->add('rarity', 'text', array('label' => 'Rarity'))
             ->add('type', 'text', array('label' => 'Type'))
             ->add('subType', 'text', array('label' => 'SubType'))

@@ -423,7 +423,7 @@ class Card {
         $this->file->move($this->getUploadRootDir($basepath), $this->file->getClientOriginalName());
 
         // set the path property to the filename where you'ved saved the file
-        $this->setImage($this->getWebPath());
+        $this->setImage($this->file->getClientOriginalName());
 
         // clean up the file property as you won't need it anymore
         $this->file = null;
