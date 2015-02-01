@@ -361,4 +361,9 @@ class Card {
     {
         return $this->artist;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

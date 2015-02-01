@@ -4,11 +4,14 @@
 
     <services>
 
-        <service id="wizardry.menu.main" class="Knp\Menu\MenuItem"
-                 factory-service="wizardry.menu_builder"
-                 factory-method="createMainMenu" scope="request">
-            <argument type="service" id="request"/>
-            <tag name="knp_menu.menu" alias="main"/>
+        <service id="sonata.admin.card" class="Wizardry\UserBundle\Admin\CardAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Card"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Card</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
         </service>
 
     </services>
