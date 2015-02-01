@@ -36,14 +36,14 @@ class CardsController extends Controller
      * )
      *
      * @View()
-     * @param string $card Card ID
+     * @param string $id Card ID
      * @return array
      */
-    public function getCardAction($card)
+    public function getCardAction($id)
     {
         $singleCard = $this->get('doctrine_mongodb')
             ->getRepository('WizardryMainBundle:Card')
-            ->find($card);
+            ->find($id);
 
         if (!$singleCard) {
             throw $this->createNotFoundException();
