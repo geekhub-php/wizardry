@@ -1,3 +1,7 @@
 wizardry_card_rest:
     resource: "@WizardryApiBundle/Controller/CardsController.php"
     type: rest
+
+wizardry_set_rest:
+    resource: "@WizardryApiBundle/Controller/SetsController.php"
+    type: rest
