@@ -3,7 +3,6 @@
 namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use Wizardry\MainBundle\Document\Set;
 
     /**
      * @ODM\Document(collection="Card")
@@ -366,4 +365,68 @@ class Card {
     {
         return $this->name;
     }
+
+
+
+    protected $file;
+
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function setFile($file)
+    {
+        $this->file = $file;
+        return $this;
+    }
+
+
+    public function getAbsolutePath()
+    {
+        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+    }
+
+    protected function getUploadRootDir($basepath)
+    {
+        // the absolute directory path where uploaded documents should be saved
+        return $basepath.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
+        return 'uploads/images/cards';
+    }
+
+    public function upload($basepath)
+    {
+        // the file property can be empty if the field is not required
+        if (null === $this->file) {
+            return;
+        }
+
+        if (null === $basepath) {
+            return;
+        }
+
+        // we use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+
+        // move takes the target directory and then the target filename to move to
+        $this->file->move($this->getUploadRootDir($basepath), $this->file->getClientOriginalName());
+
+        // set the path property to the filename where you'ved saved the file
+        $this->setImage($this->getWebPath());
+
+        // clean up the file property as you won't need it anymore
+        $this->file = null;
+    }
+
 }

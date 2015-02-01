@@ -64,7 +64,7 @@ doctrine_mongodb:
 fos_rest:
     view:
         templating_formats:
-            html: false
+            html: true
         view_response_listener: 'force'
         formats:
             json: true

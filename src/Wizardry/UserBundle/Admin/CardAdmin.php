@@ -16,7 +16,7 @@ class CardAdmin extends Admin
             ->add('name', 'text', array('label' => 'Card Name'))
             ->add('manaCost', 'text', array('label' => 'Mana Cost'))
             ->add('convertedManaCost', 'text', array('label' => 'Converted Mana Cost'))
-            ->add('image', 'text', array('label' => 'Image link'))
+            ->add('file', 'file', array('label' => 'Image link'))
             ->add('rarity', 'text', array('label' => 'Rarity'))
             ->add('type', 'text', array('label' => 'Type'))
             ->add('subType', 'text', array('label' => 'SubType'))
@@ -28,6 +28,20 @@ class CardAdmin extends Admin
 //            ->add('artist', 'document', array('class' => 'Wizardry\MainBundle\Document\Card'))
         ;
     }
+
+    public function prePersist($card) {
+        $this->saveFile($card);
+    }
+
+    public function preUpdate($card) {
+        $this->saveFile($card);
+    }
+
+    public function saveFile($card) {
+        $basepath = $this->getRequest()->getBasePath();
+        $card->upload($basepath);
+    }
+
 
     // Fields to be shown on filter forms
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
