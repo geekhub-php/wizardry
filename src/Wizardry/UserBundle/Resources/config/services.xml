@@ -14,6 +14,16 @@
             </call>
         </service>
 
+        <service id="sonata.admin.set" class="Wizardry\UserBundle\Admin\SetAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Set"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Set</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
+        </service>
+
     </services>
 
 </container>
