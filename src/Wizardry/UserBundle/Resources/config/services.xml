@@ -24,6 +24,16 @@
             </call>
         </service>
 
+        <service id="sonata.admin.block" class="Wizardry\UserBundle\Admin\BlockAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Block"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Block</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
+        </service>
+
     </services>
 
 </container>

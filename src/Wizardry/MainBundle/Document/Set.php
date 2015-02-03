@@ -170,4 +170,9 @@ class Set {
     {
         $this->cardContain->removeElement($cardContain);
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
