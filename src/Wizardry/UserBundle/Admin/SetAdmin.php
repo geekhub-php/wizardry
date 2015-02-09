@@ -16,7 +16,6 @@ class SetAdmin extends Admin
             ->add('name', 'text', array('label' => 'Set Name'))
             ->add('number', 'text')
             ->add('shortName')
-            ->add('cardContain')
         ;
     }
 

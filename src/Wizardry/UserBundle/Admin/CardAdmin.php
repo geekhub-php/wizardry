@@ -39,7 +39,7 @@ class CardAdmin extends Admin
             ->add('description')
             ->add('artDescription', 'text', array('label' => 'Art Description'))
             ->add('artist', 'text', array('label' => 'artist'))
-//            ->add('artist', 'document', array('class' => 'Wizardry\MainBundle\Document\Card'))
+            ->add('set', 'document',array('class' => 'Wizardry\MainBundle\Document\Set'), array('label' => 'Set'))
         ;
     }
 
@@ -71,8 +71,7 @@ class CardAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id')
-            ->add('name')
+            ->addIdentifier('name')
             ->add('manaCost')
             ->add('convertedManaCost')
             ->add('rarity')
