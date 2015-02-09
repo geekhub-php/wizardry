@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new Wizardry\UserBundle\WizardryUserBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

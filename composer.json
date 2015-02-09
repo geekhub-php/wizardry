@@ -26,7 +26,8 @@
         "jms/serializer-bundle": "0.13.*",
         "sonata-project/admin-bundle": "~2.3",
         "sonata-project/doctrine-mongodb-admin-bundle": "~2.3",
-        "nelmio/api-doc-bundle": "~2.7"
+        "nelmio/api-doc-bundle": "~2.7",
+        "nelmio/cors-bundle": "~1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

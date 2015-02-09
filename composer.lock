@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3765cd2e1cadb4ccccfad0febf225a9",
+    "hash": "e39021241d1dcd888b06188660225fc5",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1098,17 +1098,17 @@
         },
         {
             "name": "friendsofsymfony/rest-bundle",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "target-dir": "FOS/RestBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "a9377f6a05fb516423d6adf9079c6e5fb41e4799"
+                "reference": "4f9526ddec7fd951433586c45a78a5001d4a6997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a9377f6a05fb516423d6adf9079c6e5fb41e4799",
-                "reference": "a9377f6a05fb516423d6adf9079c6e5fb41e4799",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/4f9526ddec7fd951433586c45a78a5001d4a6997",
+                "reference": "4f9526ddec7fd951433586c45a78a5001d4a6997",
                 "shasum": ""
             },
             "require": {
@@ -1172,7 +1172,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2015-01-27 09:39:58"
+            "time": "2015-02-09 12:18:56"
         },
         {
             "name": "fzaninotto/faker",
@@ -2055,6 +2055,61 @@
                 "rest"
             ],
             "time": "2014-07-30 09:11:08"
+        },
+        {
+            "name": "nelmio/cors-bundle",
+            "version": "1.4.0",
+            "target-dir": "Nelmio/CorsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioCorsBundle.git",
+                "reference": "553b4c5cdb3ff155f910e8f6e3e0806d42c763a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nelmio/NelmioCorsBundle/zipball/553b4c5cdb3ff155f910e8f6e3e0806d42c763a6",
+                "reference": "553b4c5cdb3ff155f910e8f6e3e0806d42c763a6",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "matthiasnoback/symfony-dependency-injection-test": "0.2.*",
+                "mockery/mockery": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Nelmio\\CorsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nelmio",
+                    "homepage": "http://nelm.io"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/nelmio/NelmioCorsBundle/contributors"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Symfony2 application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain"
+            ],
+            "time": "2015-01-13 17:53:27"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -3028,12 +3083,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e25b751eb005de9b3e89e810b32775ae81800218"
+                "reference": "ac389b67145e26f99a59a06bad7346ab5e2ec097"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e25b751eb005de9b3e89e810b32775ae81800218",
-                "reference": "e25b751eb005de9b3e89e810b32775ae81800218",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/ac389b67145e26f99a59a06bad7346ab5e2ec097",
+                "reference": "ac389b67145e26f99a59a06bad7346ab5e2ec097",
                 "shasum": ""
             },
             "require": {
@@ -3136,7 +3191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-01-30 09:18:28"
+            "time": "2015-02-08 07:21:15"
         },
         {
             "name": "twig/extensions",
