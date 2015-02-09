@@ -11,6 +11,7 @@ Wizardry\MainBundle\Document\Card:
     power: 2
     toughness: 1
     artist: Ralph Horsley
+    set: @Set1
 
 Wizardry\MainBundle\Document\Set:
   Set{1..20}:

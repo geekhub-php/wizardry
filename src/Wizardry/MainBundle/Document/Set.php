@@ -33,7 +33,7 @@ class Set {
     private $shortName;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Card")
+     * @ODM\ReferenceMany(targetDocument="Card", mappedBy="set")
      */
     private $cardContain = [];
 
