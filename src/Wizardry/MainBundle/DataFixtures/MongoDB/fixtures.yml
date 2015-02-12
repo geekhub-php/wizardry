@@ -1,5 +1,5 @@
 Wizardry\MainBundle\Document\Card:
-  Card{1..20}:
+  Card{1}:
     name: Ballyrush Banneret
     manaCost: 1W
     convertedManaCost: 2
@@ -11,16 +11,87 @@ Wizardry\MainBundle\Document\Card:
     power: 2
     toughness: 1
     artist: Ralph Horsley
+    set: @Set4
+
+  Card{2}:
+    name: Herald of Serra
+    manaCost: 2WW
+    convertedManaCost: 4
+    type: Creature
+    subType: Angel
+    rarity: Rare
+    description: Test desc 2
+    artDescription: Test art desc 2
+    power: 3
+    toughness: 4
+    artist: Matthew Wilson
+    set: @Set3
+
+  Card{3}:
+    name: Ajani Steadfast
+    manaCost: 3W
+    convertedManaCost: 4
+    type: Planeswalker
+    subType: Ajani
+    rarity: Mystic Rare
+    description: Test desc 3
+    artDescription: Test art desc 3
+    power: 4
+    toughness: 4
+    artist: Chris Rahn
     set: @Set1
 
+  Card{4}:
+    name: Back to Basics
+    manaCost: 2U
+    convertedManaCost: 3
+    type: Enchantment
+    rarity: Normal
+    description: Test desc 4
+    artDescription: Test art desc 4
+    artist: Andrew Robinson
+    set: @Set3
+
+  Card{5}:
+    name: Animate Land
+    manaCost: G
+    convertedManaCost: 1
+    type: Instant
+    description: Test desc 5
+    artDescription: Test art desc 5
+    artist: Rebecca Guay
+    set: @Set2
+
 Wizardry\MainBundle\Document\Set:
-  Set{1..20}:
+  Set{1}:
     name: Magic 2015
     number: 15
     shortName: m15
-    cardContain: [@Card1, @Card2, @Card3, @Card4]
+    cardContain: [@Card3]
+
+  Set{2}:
+    name: Nemesis
+    number: 1
+    shortName: nms
+    cardContain: [@Card5]
+
+  Set{3}:
+    name: Urza's Saga
+    number: 2
+    shortName: usg
+    cardContain: [@Card4, @Card2]
+
+  Set{4}:
+    name: Morningtide
+    number: 3
+    shortName: mrn
+    cardContain: [@Card1]
 
 Wizardry\MainBundle\Document\Block:
-  Block{1..20}:
+  Block{1}:
     name: Khans of Tarkir
-    setContain: [@Set1, @Set2, @Set3, @Set4]
+    setContain: [@Set3, @Set2]
+
+  Block{2}:
+    name: Test Name 2
+    setContain: [@Set4, @Set1]
