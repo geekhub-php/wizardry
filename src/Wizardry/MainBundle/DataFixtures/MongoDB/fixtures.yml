@@ -95,3 +95,4 @@ Wizardry\MainBundle\Document\Block:
   Block{2}:
     name: Test Name 2
     setContain: [@Set4, @Set1]
+
