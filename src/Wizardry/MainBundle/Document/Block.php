@@ -102,4 +102,9 @@ class Block {
     {
         $this->setContain->removeElement($setContain);
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

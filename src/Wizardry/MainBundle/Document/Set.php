@@ -25,17 +25,17 @@ class Set {
     /**
      * @ODM\Field(type="string")
      */
-    private $number;
-
-    /**
-     * @ODM\Field(type="string")
-     */
     private $shortName;
 
     /**
      * @ODM\ReferenceMany(targetDocument="Card", mappedBy="set")
      */
     private $cardContain = [];
+
+    /**
+     * @ODM\ReferenceMany(targetDocument="Block", mappedBy="setContain")
+     */
+    private $blockIncluded;
 
     /**
      * Set id
@@ -174,5 +174,35 @@ class Set {
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * Add blockIncluded
+     *
+     * @param Wizardry\MainBundle\Document\Block $blockIncluded
+     */
+    public function addBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
+    {
+        $this->blockIncluded[] = $blockIncluded;
+    }
+
+    /**
+     * Remove blockIncluded
+     *
+     * @param Wizardry\MainBundle\Document\Block $blockIncluded
+     */
+    public function removeBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
+    {
+        $this->blockIncluded->removeElement($blockIncluded);
+    }
+
+    /**
+     * Get blockIncluded
+     *
+     * @return Doctrine\Common\Collections\Collection $blockIncluded
+     */
+    public function getBlockIncluded()
+    {
+        return $this->blockIncluded;
     }
 }
