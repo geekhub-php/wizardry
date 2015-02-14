@@ -21,7 +21,7 @@ class Block {
     private $name;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Set", inversedBy="blockIncluded")
+     * @ODM\ReferenceMany(targetDocument="Set", cascade="all")
      */
     private $setContain = [];
 
@@ -57,27 +57,15 @@ class Block {
         return $this->name;
     }
 
-    /**
-     * Set setContain
-     *
-     * @param string $setContain
-     * @return self
-     */
-    public function setSetContain($setContain)
-    {
-        $this->setContain = $setContain;
-        return $this;
-    }
 
     /**
-     * Get setContain
-     *
-     * @return string $setContain
+     * @return array
      */
     public function getSetContain()
     {
         return $this->setContain;
     }
+
     public function __construct()
     {
         $this->setContain = new \Doctrine\Common\Collections\ArrayCollection();

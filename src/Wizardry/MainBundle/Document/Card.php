@@ -76,26 +76,14 @@ class Card {
     private $artist;
 
     /**
-     *@ODM\ReferenceOne(targetDocument="Set", inversedBy="cardContain")
+     *@ODM\ReferenceOne(targetDocument="Set")
      */
     private $set;
 
     /**
-     * Set id
-     *
-     * @param \Wizardry\MainBundle\Document\Set $id
-     * @return self
-     */
-    public function setId(\Wizardry\MainBundle\Document\Set $id)
-    {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
      * Get id
      *
-     * @return \Wizardry\MainBundle\Document\Set $id
+     * @return \Wizardry\MainBundle\Document\Card $id
      */
     public function getId()
     {

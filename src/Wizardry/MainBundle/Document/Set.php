@@ -28,31 +28,19 @@ class Set {
     private $shortName;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Card", mappedBy="set")
+     * @ODM\ReferenceMany(targetDocument="Card", cascade="all")
      */
     private $cardContain = [];
 
     /**
-     * @ODM\ReferenceOne(targetDocument="Block", mappedBy="setContain")
+     * @ODM\ReferenceOne(targetDocument="Block")
      */
     private $blockIncluded;
 
     /**
-     * Set id
-     *
-     * @param \Wizardry\MainBundle\Document\Block $id
-     * @return self
-     */
-    public function setId(\Wizardry\MainBundle\Document\Block $id)
-    {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
      * Get id
      *
-     * @return \Wizardry\MainBundle\Document\Block $id
+     * @return \Wizardry\MainBundle\Document\Set $id
      */
     public function getId()
     {
