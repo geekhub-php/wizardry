@@ -15,7 +15,7 @@ class SetAdmin extends Admin
         $formMapper
             ->add('name', 'text', array('label' => 'Set Name'))
             ->add('shortName')
-            ->add('blockIncluded')
+            ->add('blockIncluded', 'sonata_type_model')
         ;
     }
 
