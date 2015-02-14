@@ -104,6 +104,19 @@ class Set {
     }
 
     /**
+     * Set blockIncluded
+     *
+     * @param string $blockIncluded
+     * @return self
+     */
+    public function setBlockIncluded($blockIncluded)
+    {
+        $this->blockIncluded = $blockIncluded;
+        return $this;
+    }
+
+
+    /**
      * Get cardContain
      *
      * @return string $cardContain
@@ -137,25 +150,7 @@ class Set {
         $this->cardContain->removeElement($cardContain);
     }
 
-    /**
-     * Add blockIncluded
-     *
-     * @param Wizardry\MainBundle\Document\Block $blockIncluded
-     */
-    public function addBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
-    {
-        $this->blockIncluded[] = $blockIncluded;
-    }
 
-    /**
-     * Remove blockIncluded
-     *
-     * @param Wizardry\MainBundle\Document\Block $blockIncluded
-     */
-    public function removeBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
-    {
-        $this->blockIncluded->removeElement($blockIncluded);
-    }
 
     /**
      * Get blockIncluded
