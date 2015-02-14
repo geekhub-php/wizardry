@@ -131,25 +131,21 @@ Wizardry\MainBundle\Document\Card:
 Wizardry\MainBundle\Document\Set:
   Set{1}:
     name: Magic 2015
-    number: 15
     shortName: m15
     cardContain: [@Card3, @Card6]
 
   Set{2}:
     name: Nemesis
-    number: 1
     shortName: nms
     cardContain: [@Card5, @Card9, @Card10]
 
   Set{3}:
     name: Urza's Saga
-    number: 2
     shortName: usg
     cardContain: [@Card4, @Card2, @Card7]
 
   Set{4}:
     name: Morningtide
-    number: 3
     shortName: mrn
     cardContain: [@Card1, @Card8]
 

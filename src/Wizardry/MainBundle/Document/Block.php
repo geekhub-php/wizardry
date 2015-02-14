@@ -21,7 +21,7 @@ class Block {
     private $name;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Set")
+     * @ODM\ReferenceMany(targetDocument="Set", inversedBy="blockIncluded")
      */
     private $setContain = [];
 

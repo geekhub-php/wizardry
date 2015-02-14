@@ -33,7 +33,7 @@ class Set {
     private $cardContain = [];
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Block", mappedBy="setContain")
+     * @ODM\ReferenceOne(targetDocument="Block", mappedBy="setContain")
      */
     private $blockIncluded;
 
@@ -80,29 +80,7 @@ class Set {
     {
         return $this->name;
     }
-
-    /**
-     * Set number
-     *
-     * @param string $number
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        $this->number = $number;
-        return $this;
-    }
-
-    /**
-     * Get number
-     *
-     * @return string $number
-     */
-    public function getNumber()
-    {
-        return $this->number;
-    }
-
+    
     /**
      * Set shortName
      *
@@ -171,11 +149,6 @@ class Set {
         $this->cardContain->removeElement($cardContain);
     }
 
-    public function __toString()
-    {
-        return $this->name;
-    }
-
     /**
      * Add blockIncluded
      *
@@ -204,5 +177,10 @@ class Set {
     public function getBlockIncluded()
     {
         return $this->blockIncluded;
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }
