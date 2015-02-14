@@ -21,7 +21,7 @@ class Block {
     private $name;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Set")
+     * @ODM\ReferenceMany(targetDocument="Set", inversedBy="blockIncluded")
      */
     private $setContain = [];
 
@@ -101,5 +101,10 @@ class Block {
     public function removeSetContain(\Wizardry\MainBundle\Document\Set $setContain)
     {
         $this->setContain->removeElement($setContain);
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }

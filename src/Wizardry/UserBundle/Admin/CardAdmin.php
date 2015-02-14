@@ -31,12 +31,35 @@ class CardAdmin extends Admin
             ->add('manaCost', 'text', array('label' => 'Mana Cost'))
             ->add('convertedManaCost', 'text', array('label' => 'Converted Mana Cost'))
             ->add('file', 'file', ['label' => 'Image'], $fileFieldOptions)
-            ->add('rarity', 'text', array('label' => 'Rarity'))
-            ->add('type', 'text', array('label' => 'Type'))
-            ->add('subType', 'text', array('label' => 'SubType'))
-            ->add('power', 'text', array('label' => 'Power'))
-            ->add('toughness', 'text', array('label' => 'Toughness'))
-            ->add('description')
+            ->add('rarity', 'choice', array('choices' => array(
+                'common' => 'Common',
+                'uncommon' => 'Uncommon',
+                'rare' => 'Rare',
+                'mythicRare' => 'Mythic Rare'
+            )))
+            ->add('type', 'choice', array('choices' => array(
+                'artifact' => 'Artifact',
+                'creature' => 'Creature',
+                'enchantment' => 'Enchantment',
+                'instant' => 'Instant',
+                'land' => 'Land',
+                'planeswalker' => 'Planeswalker',
+                'tribal' => 'Tribal',
+                'sorcery' => 'Sorcery',
+                'phenomenon' => 'Phenomenon',
+                'vanguard' => 'Vanguard',
+                'schema' => 'Schema'
+            )))
+            ->add('subtype', 'choice', array('choices' => array(
+                null => null,
+                'basic' => 'Basic',
+                'legendary' => 'Legendary',
+                'snow' => 'Snow',
+                'world' => 'World'
+            )))
+            ->add('power', 'text', array('required'=> false, 'label' => 'Power (optional)'))
+            ->add('toughness', 'text', array('required'=> false, 'label' => 'Toughness (optional)'))
+            ->add('description', 'textarea')
             ->add('artDescription', 'text', array('label' => 'Art Description'))
             ->add('artist', 'text', array('label' => 'artist'))
             ->add('set', 'document',array('class' => 'Wizardry\MainBundle\Document\Set'), array('label' => 'Set'))

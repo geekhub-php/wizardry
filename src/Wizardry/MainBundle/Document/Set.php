@@ -25,17 +25,17 @@ class Set {
     /**
      * @ODM\Field(type="string")
      */
-    private $number;
-
-    /**
-     * @ODM\Field(type="string")
-     */
     private $shortName;
 
     /**
      * @ODM\ReferenceMany(targetDocument="Card", mappedBy="set")
      */
     private $cardContain = [];
+
+    /**
+     * @ODM\ReferenceOne(targetDocument="Block", mappedBy="setContain")
+     */
+    private $blockIncluded;
 
     /**
      * Set id
@@ -80,29 +80,7 @@ class Set {
     {
         return $this->name;
     }
-
-    /**
-     * Set number
-     *
-     * @param string $number
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        $this->number = $number;
-        return $this;
-    }
-
-    /**
-     * Get number
-     *
-     * @return string $number
-     */
-    public function getNumber()
-    {
-        return $this->number;
-    }
-
+    
     /**
      * Set shortName
      *
@@ -169,6 +147,36 @@ class Set {
     public function removeCardContain(\Wizardry\MainBundle\Document\Card $cardContain)
     {
         $this->cardContain->removeElement($cardContain);
+    }
+
+    /**
+     * Add blockIncluded
+     *
+     * @param Wizardry\MainBundle\Document\Block $blockIncluded
+     */
+    public function addBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
+    {
+        $this->blockIncluded[] = $blockIncluded;
+    }
+
+    /**
+     * Remove blockIncluded
+     *
+     * @param Wizardry\MainBundle\Document\Block $blockIncluded
+     */
+    public function removeBlockIncluded(\Wizardry\MainBundle\Document\Block $blockIncluded)
+    {
+        $this->blockIncluded->removeElement($blockIncluded);
+    }
+
+    /**
+     * Get blockIncluded
+     *
+     * @return Doctrine\Common\Collections\Collection $blockIncluded
+     */
+    public function getBlockIncluded()
+    {
+        return $this->blockIncluded;
     }
 
     public function __toString()

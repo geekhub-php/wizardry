@@ -14,8 +14,8 @@ class SetAdmin extends Admin
     {
         $formMapper
             ->add('name', 'text', array('label' => 'Set Name'))
-            ->add('number', 'text')
             ->add('shortName')
+            ->add('blockIncluded')
         ;
     }
 
@@ -23,7 +23,7 @@ class SetAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('number')
+            ->add('blockIncluded')
         ;
     }
 
@@ -31,9 +31,9 @@ class SetAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('number')
             ->add('shortName')
             ->add('cardContain')
+            ->add('blockIncluded')
         ;
     }
 }

@@ -51,12 +51,12 @@ class Card {
     private $rarity;
 
     /**
-     * @ODM\Field(type="float")
+     * @ODM\Field(type="int")
      */
     private $power;
 
     /**
-     * @ODM\Field(type="float")
+     * @ODM\Field(type="int")
      */
     private $toughness;
 
