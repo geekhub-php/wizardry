@@ -62,30 +62,96 @@ Wizardry\MainBundle\Document\Card:
     artist: Rebecca Guay
     set: @Set2
 
+  Card{6}:
+    name: Banisher Priest
+    manaCost: 1WW
+    convertedManaCost: 3
+    type: Creature
+    subType: Human Cleric
+    rarity: Mystic Rare
+    description: When Banisher Priest enters the battlefield, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)
+    artDescription: Oathbreaker, I cast you out!
+    power: 2
+    toughness: 2
+    artist: Willian Murai
+    set: @Set1
+
+  Card{7}:
+    name: Lingering Souls
+    manaCost: 2W
+    convertedManaCost: 3
+    type: Sorcery
+    subType: Aura
+    rarity: Uncommon
+    description:  Put two 1/1 white Spirit creature tokens with flying onto the battlefield. Flashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)
+    artDescription: The murdered inhabitants of Hollowhenge impart to the living the terror they felt in death.
+    artist: Bad Cook
+    set: @Set3
+
+  Card{8}:
+    name: Banisher Priest
+    manaCost: 1WW
+    convertedManaCost: 3
+    type: Creature
+    subType: Human Cleric
+    rarity: Mystic Rare
+    description: When Banisher Priest enters the battlefield, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)
+    artDescription: Oathbreaker, I cast you out!
+    power: 2
+    toughness: 2
+    artist: Willian Murai
+    set: @Set4
+
+  Card{9}:
+    name: Blessing
+    manaCost: WW
+    convertedManaCost: 2
+    type: Enchantment
+    subType: Aura
+    rarity: Common
+    description:  Enchanted creature gets +1/+1 until end of turn.
+    artDescription: Virtue can't survive without strength."—Ardanna of the Angelic Council
+    artist: Jason A. Engle
+    set: @Set2
+
+
+  Card{10}:
+    name: Natures Blessing
+    manaCost: 1
+    convertedManaCost: 1
+    type: Enchantment
+    subType: Aura
+    rarity: Uncommon
+    description:  Enchanted creature gets +1/+1 until end of turn.
+    artDescription: Virtue can't survive without strength."—Ardanna of the Angelic Council
+    artist: Jason A. Engle
+    set: @Set2
+
+
 Wizardry\MainBundle\Document\Set:
   Set{1}:
     name: Magic 2015
     number: 15
     shortName: m15
-    cardContain: [@Card3]
+    cardContain: [@Card3, @Card6]
 
   Set{2}:
     name: Nemesis
     number: 1
     shortName: nms
-    cardContain: [@Card5]
+    cardContain: [@Card5, @Card9, @Card10]
 
   Set{3}:
     name: Urza's Saga
     number: 2
     shortName: usg
-    cardContain: [@Card4, @Card2]
+    cardContain: [@Card4, @Card2, @Card7]
 
   Set{4}:
     name: Morningtide
     number: 3
     shortName: mrn
-    cardContain: [@Card1]
+    cardContain: [@Card1, @Card8]
 
 Wizardry\MainBundle\Document\Block:
   Block{1}:
@@ -93,6 +159,6 @@ Wizardry\MainBundle\Document\Block:
     setContain: [@Set3, @Set2]
 
   Block{2}:
-    name: Test Name 2
+    name: Zendikar Cycle
     setContain: [@Set4, @Set1]
 
