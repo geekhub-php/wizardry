@@ -26,7 +26,7 @@ class Set
     private $shortName;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Card")
+     * @ODM\ReferenceMany(targetDocument="Card", cascade="all")
      */
     private $cardContain = [];
 
