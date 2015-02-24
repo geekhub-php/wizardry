@@ -3,15 +3,13 @@
 namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use Wizardry\MainBundle\Document\Block;
-use Wizardry\MainBundle\Document\Card;
 
     /**
      * @ODM\Document(collection="Set")
      */
 
-class Set {
-
+class Set
+{
     /**
      * @ODM\Id
      */
@@ -28,7 +26,7 @@ class Set {
     private $shortName;
 
     /**
-     * @ODM\ReferenceMany(targetDocument="Card", cascade="all")
+     * @ODM\ReferenceMany(targetDocument="Card")
      */
     private $cardContain = [];
 
@@ -50,12 +48,13 @@ class Set {
     /**
      * Set name
      *
-     * @param string $name
+     * @param  string $name
      * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -68,16 +67,17 @@ class Set {
     {
         return $this->name;
     }
-    
+
     /**
      * Set shortName
      *
-     * @param string $shortName
+     * @param  string $shortName
      * @return self
      */
     public function setShortName($shortName)
     {
         $this->shortName = $shortName;
+
         return $this;
     }
 
@@ -94,27 +94,28 @@ class Set {
     /**
      * Set cardContain
      *
-     * @param string $cardContain
+     * @param  string $cardContain
      * @return self
      */
     public function setCardContain($cardContain)
     {
         $this->cardContain = $cardContain;
+
         return $this;
     }
 
     /**
      * Set blockIncluded
      *
-     * @param string $blockIncluded
+     * @param  string $blockIncluded
      * @return self
      */
     public function setBlockIncluded($blockIncluded)
     {
         $this->blockIncluded = $blockIncluded;
+
         return $this;
     }
-
 
     /**
      * Get cardContain
@@ -129,7 +130,7 @@ class Set {
     {
         $this->cardContain = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
     /**
      * Add cardContain
      *
@@ -149,8 +150,6 @@ class Set {
     {
         $this->cardContain->removeElement($cardContain);
     }
-
-
 
     /**
      * Get blockIncluded

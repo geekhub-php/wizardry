@@ -36,7 +36,7 @@ class CardsController extends Controller
      * )
      *
      * @View()
-     * @param string $id Card ID
+     * @param  string $id Card ID
      * @return array
      */
     public function getCardAction($id)

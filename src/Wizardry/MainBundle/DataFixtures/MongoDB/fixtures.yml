@@ -157,4 +157,3 @@ Wizardry\MainBundle\Document\Block:
   Block{2}:
     name: Zendikar Cycle
     setContain: [@Set4, @Set1]
-

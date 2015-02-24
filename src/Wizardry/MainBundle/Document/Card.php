@@ -8,8 +8,8 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
      * @ODM\Document(collection="Card")
      */
 
-class Card {
-
+class Card
+{
     /**
      * @ODM\Id
      */
@@ -93,12 +93,13 @@ class Card {
     /**
      * Set name
      *
-     * @param string $name
+     * @param  string $name
      * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -115,12 +116,13 @@ class Card {
     /**
      * Set manaCost
      *
-     * @param string $manaCost
+     * @param  string $manaCost
      * @return self
      */
     public function setManaCost($manaCost)
     {
         $this->manaCost = $manaCost;
+
         return $this;
     }
 
@@ -137,12 +139,13 @@ class Card {
     /**
      * Set convertedManaCost
      *
-     * @param int $convertedManaCost
+     * @param  int  $convertedManaCost
      * @return self
      */
     public function setConvertedManaCost($convertedManaCost)
     {
         $this->convertedManaCost = $convertedManaCost;
+
         return $this;
     }
 
@@ -159,12 +162,13 @@ class Card {
     /**
      * Set image
      *
-     * @param file $image
+     * @param  file $image
      * @return self
      */
     public function setImage($image)
     {
         $this->image = $image;
+
         return $this;
     }
 
@@ -181,12 +185,13 @@ class Card {
     /**
      * Set type
      *
-     * @param string $type
+     * @param  string $type
      * @return self
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -203,12 +208,13 @@ class Card {
     /**
      * Set subType
      *
-     * @param string $subType
+     * @param  string $subType
      * @return self
      */
     public function setSubType($subType)
     {
         $this->subType = $subType;
+
         return $this;
     }
 
@@ -225,12 +231,13 @@ class Card {
     /**
      * Set rarity
      *
-     * @param string $rarity
+     * @param  string $rarity
      * @return self
      */
     public function setRarity($rarity)
     {
         $this->rarity = $rarity;
+
         return $this;
     }
 
@@ -247,12 +254,13 @@ class Card {
     /**
      * Set power
      *
-     * @param float $power
+     * @param  float $power
      * @return self
      */
     public function setPower($power)
     {
         $this->power = $power;
+
         return $this;
     }
 
@@ -269,12 +277,13 @@ class Card {
     /**
      * Set toughness
      *
-     * @param float $toughness
+     * @param  float $toughness
      * @return self
      */
     public function setToughness($toughness)
     {
         $this->toughness = $toughness;
+
         return $this;
     }
 
@@ -291,12 +300,13 @@ class Card {
     /**
      * Set description
      *
-     * @param string $description
+     * @param  string $description
      * @return self
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -313,12 +323,13 @@ class Card {
     /**
      * Set artDescription
      *
-     * @param string $artDescription
+     * @param  string $artDescription
      * @return self
      */
     public function setArtDescription($artDescription)
     {
         $this->artDescription = $artDescription;
+
         return $this;
     }
 
@@ -335,12 +346,13 @@ class Card {
     /**
      * Set artist
      *
-     * @param string $artist
+     * @param  string $artist
      * @return self
      */
     public function setArtist($artist)
     {
         $this->artist = $artist;
+
         return $this;
     }
 
@@ -359,10 +371,7 @@ class Card {
         return $this->name;
     }
 
-
-
     protected $file;
-
 
     public function getFile()
     {
@@ -372,9 +381,9 @@ class Card {
     public function setFile($file)
     {
         $this->file = $file;
+
         return $this;
     }
-
 
     public function getAbsolutePath()
     {
@@ -422,16 +431,16 @@ class Card {
         $this->file = null;
     }
 
-
     /**
      * Set set
      *
-     * @param Wizardry\MainBundle\Document\Set $set
+     * @param  Wizardry\MainBundle\Document\Set $set
      * @return self
      */
     public function setSet(\Wizardry\MainBundle\Document\Set $set)
     {
         $this->set = $set;
+
         return $this;
     }
 

@@ -30,13 +30,12 @@ class SetsController extends Controller
 
     }
 
-
     /**
      * @ApiDoc(
      *  description="Returns a single Set"
      * )
      *
-     * @param string $id Set ID
+     * @param  string $id Set ID
      * @return array
      * @View()
      */
@@ -46,7 +45,6 @@ class SetsController extends Controller
             ->getRepository('WizardryMainBundle:Set')
             ->find($id);
 
-
         if (!$set) {
             throw $this->createNotFoundException();
         }
@@ -55,6 +53,5 @@ class SetsController extends Controller
             'set' => $set
         ];
     }
-
 
 }
