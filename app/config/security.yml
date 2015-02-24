@@ -1,7 +1,11 @@
 security:
     providers:
         in_memory:
-            memory: ~
+            memory:
+                users:
+                    admin:
+                         password: samurai
+                         roles: 'ROLE_ADMIN'
 
     firewalls:
         dev:
@@ -10,3 +14,11 @@ security:
 
         default:
             anonymous: ~
+            http_basic: ~
+
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    encoders:
+         Symfony\Component\Security\Core\User\User: plaintext

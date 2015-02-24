@@ -19,7 +19,15 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/mongodb-odm": "1.0.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*@dev"
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "hautelook/alice-bundle": "0.2.*",
+        "friendsofsymfony/rest-bundle": "~1.5",
+        "jms/serializer-bundle": "0.13.*",
+        "sonata-project/admin-bundle": "~2.3",
+        "sonata-project/doctrine-mongodb-admin-bundle": "~2.3",
+        "nelmio/api-doc-bundle": "~2.7",
+        "nelmio/cors-bundle": "~1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
