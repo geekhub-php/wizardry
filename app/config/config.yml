@@ -95,3 +95,7 @@ nelmio_cors:
             max_age: 3600
             allow_credentials: false
 
+fos_user:
+    db_driver: mongodb
+    firewall_name: main
+    user_class: Wizardry\UserBundle\Document\User
