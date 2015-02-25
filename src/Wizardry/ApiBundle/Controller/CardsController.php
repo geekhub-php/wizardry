@@ -8,7 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CardsController extends Controller
 {
-
     /**
      * @ApiDoc(
      *  resource=true,
@@ -25,9 +24,8 @@ class CardsController extends Controller
             ->findAll();
 
         return [
-            'cards' => $cards
+            'cards' => $cards,
         ];
-
     }
 
     /**
@@ -36,7 +34,9 @@ class CardsController extends Controller
      * )
      *
      * @View()
+     *
      * @param string $id Card ID
+     *
      * @return array
      */
     public function getCardAction($id)
@@ -50,7 +50,7 @@ class CardsController extends Controller
         }
 
         return [
-            'card' => $singleCard
+            'card' => $singleCard,
         ];
     }
 }

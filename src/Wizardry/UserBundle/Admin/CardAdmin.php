@@ -20,10 +20,10 @@ class CardAdmin extends Admin
         if ($image && ($webPath = $image->getWebPath())) {
             // get the container so the full path to the image can be set
             $container = $this->getConfigurationPool()->getContainer();
-            $fullPath = $container->get('request')->getBasePath() . '/' . $webPath;
+            $fullPath = $container->get('request')->getBasePath().'/'.$webPath;
 
             // add a 'help' option containing the preview's img tag
-            $fileFieldOptions['help'] = '<img src="' . $fullPath . '" class="admin-preview" />';
+            $fileFieldOptions['help'] = '<img src="'.$fullPath.'" class="admin-preview" />';
         }
 
         $formMapper
@@ -36,8 +36,8 @@ class CardAdmin extends Admin
                     'common' => 'Common',
                     'uncommon' => 'Uncommon',
                     'rare' => 'Rare',
-                    'mythicRare' => 'Mythic Rare'
-                )
+                    'mythicRare' => 'Mythic Rare',
+                ),
             ))
             ->add('type', 'choice', array(
                 'choices' => array(
@@ -51,8 +51,8 @@ class CardAdmin extends Admin
                     'sorcery' => 'Sorcery',
                     'phenomenon' => 'Phenomenon',
                     'vanguard' => 'Vanguard',
-                    'schema' => 'Schema'
-                )
+                    'schema' => 'Schema',
+                ),
             ))
             ->add('subtype', 'choice', array(
                 'choices' => array(
@@ -60,8 +60,8 @@ class CardAdmin extends Admin
                     'basic' => 'Basic',
                     'legendary' => 'Legendary',
                     'snow' => 'Snow',
-                    'world' => 'World'
-                )
+                    'world' => 'World',
+                ),
             ))
             ->add('power', 'text', array('required' => false, 'label' => 'Power (optional)'))
             ->add('toughness', 'text', array('required' => false, 'label' => 'Toughness (optional)'))
@@ -88,7 +88,6 @@ class CardAdmin extends Admin
         $basepath = $this->getRequest()->getBasePath();
         $card->upload($basepath);
     }
-
 
     // Fields to be shown on filter forms
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

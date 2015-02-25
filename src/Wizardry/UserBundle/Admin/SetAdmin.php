@@ -9,7 +9,6 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class SetAdmin extends Admin
 {
-
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

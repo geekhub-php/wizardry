@@ -9,7 +9,6 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class BlockAdmin extends Admin
 {
-
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

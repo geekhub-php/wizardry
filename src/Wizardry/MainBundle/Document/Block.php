@@ -3,13 +3,12 @@
 namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use Wizardry\MainBundle\Document\Set;
 
-    /**
-     * @ODM\Document(collection="Block")
-     */
-
-class Block {
+/**
+ * @ODM\Document(collection="Block")
+ */
+class Block
+{
     /**
      * @ODM\Id
      */
@@ -26,7 +25,7 @@ class Block {
     private $setContain = [];
 
     /**
-     * Get id
+     * Get id.
      *
      * @return id $id
      */
@@ -36,19 +35,21 @@ class Block {
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string $name
      */
@@ -56,7 +57,6 @@ class Block {
     {
         return $this->name;
     }
-
 
     /**
      * @return array
@@ -70,9 +70,9 @@ class Block {
     {
         $this->setContain = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
     /**
-     * Add setContain
+     * Add setContain.
      *
      * @param Wizardry\MainBundle\Document\Set $setContain
      */
@@ -82,7 +82,7 @@ class Block {
     }
 
     /**
-     * Remove setContain
+     * Remove setContain.
      *
      * @param Wizardry\MainBundle\Document\Set $setContain
      */

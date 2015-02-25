@@ -3,15 +3,12 @@
 namespace Wizardry\MainBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-use Wizardry\MainBundle\Document\Block;
-use Wizardry\MainBundle\Document\Card;
 
-    /**
-     * @ODM\Document(collection="Set")
-     */
-
-class Set {
-
+/**
+ * @ODM\Document(collection="Set")
+ */
+class Set
+{
     /**
      * @ODM\Id
      */
@@ -38,7 +35,7 @@ class Set {
     private $blockIncluded;
 
     /**
-     * Get id
+     * Get id.
      *
      * @return \Wizardry\MainBundle\Document\Set $id
      */
@@ -48,19 +45,21 @@ class Set {
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string $name
      */
@@ -68,21 +67,23 @@ class Set {
     {
         return $this->name;
     }
-    
+
     /**
-     * Set shortName
+     * Set shortName.
      *
      * @param string $shortName
+     *
      * @return self
      */
     public function setShortName($shortName)
     {
         $this->shortName = $shortName;
+
         return $this;
     }
 
     /**
-     * Get shortName
+     * Get shortName.
      *
      * @return string $shortName
      */
@@ -92,32 +93,35 @@ class Set {
     }
 
     /**
-     * Set cardContain
+     * Set cardContain.
      *
      * @param string $cardContain
+     *
      * @return self
      */
     public function setCardContain($cardContain)
     {
         $this->cardContain = $cardContain;
+
         return $this;
     }
 
     /**
-     * Set blockIncluded
+     * Set blockIncluded.
      *
      * @param string $blockIncluded
+     *
      * @return self
      */
     public function setBlockIncluded($blockIncluded)
     {
         $this->blockIncluded = $blockIncluded;
+
         return $this;
     }
 
-
     /**
-     * Get cardContain
+     * Get cardContain.
      *
      * @return string $cardContain
      */
@@ -129,9 +133,9 @@ class Set {
     {
         $this->cardContain = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
     /**
-     * Add cardContain
+     * Add cardContain.
      *
      * @param Wizardry\MainBundle\Document\Card $cardContain
      */
@@ -141,7 +145,7 @@ class Set {
     }
 
     /**
-     * Remove cardContain
+     * Remove cardContain.
      *
      * @param Wizardry\MainBundle\Document\Card $cardContain
      */
@@ -150,10 +154,8 @@ class Set {
         $this->cardContain->removeElement($cardContain);
     }
 
-
-
     /**
-     * Get blockIncluded
+     * Get blockIncluded.
      *
      * @return Doctrine\Common\Collections\Collection $blockIncluded
      */

@@ -7,7 +7,6 @@ use Nelmio\Alice\Fixtures;
 
 class LoadCardData extends DataFixtureLoader
 {
-
     /**
      * {@inheritDoc}
      */

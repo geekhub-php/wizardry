@@ -8,7 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class SetsController extends Controller
 {
-
     /**
      * @ApiDoc(
      *  resource=true,
@@ -25,11 +24,9 @@ class SetsController extends Controller
             ->findAll();
 
         return [
-            'sets' => $sets
+            'sets' => $sets,
         ];
-
     }
-
 
     /**
      * @ApiDoc(
@@ -37,6 +34,7 @@ class SetsController extends Controller
      * )
      *
      * @param string $id Set ID
+     *
      * @return array
      * @View()
      */
@@ -46,15 +44,12 @@ class SetsController extends Controller
             ->getRepository('WizardryMainBundle:Set')
             ->find($id);
 
-
         if (!$set) {
             throw $this->createNotFoundException();
         }
 
         return [
-            'set' => $set
+            'set' => $set,
         ];
     }
-
-
 }
