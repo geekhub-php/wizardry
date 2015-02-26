@@ -34,6 +34,10 @@
             </call>
         </service>
 
+        <service id="wizardry_user.registration.form.type" class="Wizardry\UserBundle\Form\Type\RegistrationFormType">
+            <tag name="form.type" alias="wizardry_user_registration"/>
+        </service>
+
     </services>
 
 </container>
