@@ -13,3 +13,8 @@
 /composer.phar
 /.idea/
 *.php~
+/components/
+/node_modules/
+web/assetic
+web/css
+web/fonts

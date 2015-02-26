@@ -1,0 +1,23 @@
+{
+  "name": "wizardry",
+  "version": "1.0.0",
+  "description": "Wizardry ========================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/geekhub-php/wizardry.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/geekhub-php/wizardry/issues"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "~1.5.0",
+    "gulp": "~3.8.11",
+    "gulp-sass": "~1.3.3"
+  }
+}

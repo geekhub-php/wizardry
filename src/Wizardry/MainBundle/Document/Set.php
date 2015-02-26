@@ -47,8 +47,7 @@ class Set
     /**
      * Set name.
      *
-     * @param string $name
-     *
+     * @param  string $name
      * @return self
      */
     public function setName($name)
@@ -71,8 +70,7 @@ class Set
     /**
      * Set shortName.
      *
-     * @param string $shortName
-     *
+     * @param  string $shortName
      * @return self
      */
     public function setShortName($shortName)
@@ -95,8 +93,7 @@ class Set
     /**
      * Set cardContain.
      *
-     * @param string $cardContain
-     *
+     * @param  string $cardContain
      * @return self
      */
     public function setCardContain($cardContain)
@@ -109,8 +106,7 @@ class Set
     /**
      * Set blockIncluded.
      *
-     * @param string $blockIncluded
-     *
+     * @param  string $blockIncluded
      * @return self
      */
     public function setBlockIncluded($blockIncluded)
