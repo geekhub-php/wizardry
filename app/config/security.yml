@@ -36,5 +36,4 @@ security:
          ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     encoders:
-         Symfony\Component\Security\Core\User\User: plaintext
          FOS\UserBundle\Model\UserInterface: sha512
