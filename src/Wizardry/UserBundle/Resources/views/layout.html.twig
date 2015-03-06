@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block stylesheets %}
+        {% stylesheets
+        '@bootstrap_css'
+        'css/main.css' %}
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css"/>
+        {% endstylesheets %}
+    {% endblock %}
+
+    {% block javascript %}
+        {% javascripts
+        '@jquery'
+        '@bootstrap_js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</head>
+<body>
+<div class="container user-form">
+
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+
+            <div class="flash-{{ type }} alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div>
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    </div>
+</div>
+
+</body>
+</html>

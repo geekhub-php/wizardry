@@ -1,0 +1,159 @@
+Wizardry\MainBundle\Document\Card:
+  Card{1}:
+    name: Ballyrush Banneret
+    manaCost: 1W
+    convertedManaCost: 2
+    type: Creature
+    subType: Kithkin Soldier
+    rarity: Mystic Rare
+    description: Kithkin spells and Soldier spells you cast cost 1 less to cast.
+    artDescription: Only wool from the side of the springjack turned most often to the sun can be woven into kithkin battle standards. Jackherds record every movement of their woolly-jacks until shearing.
+    power: 2
+    toughness: 1
+    artist: Ralph Horsley
+    set: @Set4
+
+  Card{2}:
+    name: Herald of Serra
+    manaCost: 2WW
+    convertedManaCost: 4
+    type: Creature
+    subType: Angel
+    rarity: Rare
+    description: Test desc 2
+    artDescription: Test art desc 2
+    power: 3
+    toughness: 4
+    artist: Matthew Wilson
+    set: @Set3
+
+  Card{3}:
+    name: Ajani Steadfast
+    manaCost: 3W
+    convertedManaCost: 4
+    type: Planeswalker
+    subType: Ajani
+    rarity: Mystic Rare
+    description: Test desc 3
+    artDescription: Test art desc 3
+    power: 4
+    toughness: 4
+    artist: Chris Rahn
+    set: @Set1
+
+  Card{4}:
+    name: Back to Basics
+    manaCost: 2U
+    convertedManaCost: 3
+    type: Enchantment
+    rarity: Normal
+    description: Test desc 4
+    artDescription: Test art desc 4
+    artist: Andrew Robinson
+    set: @Set3
+
+  Card{5}:
+    name: Animate Land
+    manaCost: G
+    convertedManaCost: 1
+    type: Instant
+    description: Test desc 5
+    artDescription: Test art desc 5
+    artist: Rebecca Guay
+    set: @Set2
+
+  Card{6}:
+    name: Banisher Priest
+    manaCost: 1WW
+    convertedManaCost: 3
+    type: Creature
+    subType: Human Cleric
+    rarity: Mystic Rare
+    description: When Banisher Priest enters the battlefield, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)
+    artDescription: Oathbreaker, I cast you out!
+    power: 2
+    toughness: 2
+    artist: Willian Murai
+    set: @Set1
+
+  Card{7}:
+    name: Lingering Souls
+    manaCost: 2W
+    convertedManaCost: 3
+    type: Sorcery
+    subType: Aura
+    rarity: Uncommon
+    description:  Put two 1/1 white Spirit creature tokens with flying onto the battlefield. Flashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)
+    artDescription: The murdered inhabitants of Hollowhenge impart to the living the terror they felt in death.
+    artist: Bad Cook
+    set: @Set3
+
+  Card{8}:
+    name: Banisher Priest
+    manaCost: 1WW
+    convertedManaCost: 3
+    type: Creature
+    subType: Human Cleric
+    rarity: Mystic Rare
+    description: When Banisher Priest enters the battlefield, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)
+    artDescription: Oathbreaker, I cast you out!
+    power: 2
+    toughness: 2
+    artist: Willian Murai
+    set: @Set4
+
+  Card{9}:
+    name: Blessing
+    manaCost: WW
+    convertedManaCost: 2
+    type: Enchantment
+    subType: Aura
+    rarity: Common
+    description:  Enchanted creature gets +1/+1 until end of turn.
+    artDescription: Virtue can't survive without strength."—Ardanna of the Angelic Council
+    artist: Jason A. Engle
+    set: @Set2
+
+
+  Card{10}:
+    name: Natures Blessing
+    manaCost: 1
+    convertedManaCost: 1
+    type: Enchantment
+    subType: Aura
+    rarity: Uncommon
+    description:  Enchanted creature gets +1/+1 until end of turn.
+    artDescription: Virtue can't survive without strength."—Ardanna of the Angelic Council
+    artist: Jason A. Engle
+    set: @Set2
+
+
+Wizardry\MainBundle\Document\Set:
+  Set{1}:
+    name: Magic 2015
+    shortName: m15
+    cardContain: [@Card3, @Card6]
+
+  Set{2}:
+    name: Nemesis
+    shortName: nms
+    cardContain: [@Card5, @Card9, @Card10]
+
+  Set{3}:
+    name: Urza's Saga
+    shortName: usg
+    cardContain: [@Card4, @Card2, @Card7]
+
+  Set{4}:
+    name: Morningtide
+    shortName: mrn
+    cardContain: [@Card1, @Card8]
+
+Wizardry\MainBundle\Document\Block:
+  Block{1}:
+    name: Khans of Tarkir
+    setContain: [@Set3, @Set2]
+
+  Block{2}:
+    name: Zendikar Cycle
+    setContain: [@Set4, @Set1]

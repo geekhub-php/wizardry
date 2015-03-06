@@ -1,3 +1,18 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+_wizardry:
+    resource: "@WizardryMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+_wizardry_api:
+    resource : "@WizardryApiBundle/Resources/config/routing.yml"
+    prefix: /api
+
+_wizardry_user:
+    resource: "@WizardryUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

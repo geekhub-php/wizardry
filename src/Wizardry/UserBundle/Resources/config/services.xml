@@ -1,0 +1,43 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="sonata.admin.card" class="Wizardry\UserBundle\Admin\CardAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Card"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Card</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.set" class="Wizardry\UserBundle\Admin\SetAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Set"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Set</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.block" class="Wizardry\UserBundle\Admin\BlockAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Block"/>
+            <argument />
+            <argument>Wizardry\MainBundle\Document\Block</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>UserBundle</argument>
+            </call>
+        </service>
+
+        <service id="wizardry_user.registration.form.type" class="Wizardry\UserBundle\Form\Type\RegistrationFormType">
+            <tag name="form.type" alias="wizardry_user_registration"/>
+        </service>
+
+    </services>
+
+</container>

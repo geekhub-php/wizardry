@@ -8,19 +8,32 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.6.*",
+        "symfony/symfony": "2.7.x-dev",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~3.0.12",
+        "sensio/distribution-bundle": "~3.0,>=3.0.12",
         "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "doctrine/mongodb-odm": "1.0.*@dev",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "friendsofsymfony/rest-bundle": "~1.5",
+        "jms/serializer-bundle": "0.13.*",
+        "sonata-project/admin-bundle": "~2.3",
+        "sonata-project/doctrine-mongodb-admin-bundle": "~2.3",
+        "nelmio/api-doc-bundle": "~2.7",
+        "nelmio/cors-bundle": "~1.4",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "twitter/bootstrap": "3.3.*",
+        "components/jquery": "1.11.1"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "hautelook/alice-bundle": "0.2.*"
     },
     "scripts": {
         "post-root-package-install": [
@@ -54,7 +67,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.6-dev"
+            "dev-master": "2.7-dev"
         }
     }
 }
