@@ -102,20 +102,46 @@ doctrine_mongodb:
             auto_mapping: true
 
 fos_rest:
+    serializer:
+        serialize_null: true
     view:
-        templating_formats:
+    # default_engine: php
+        view_response_listener: force
+        force_redirects:
             html: true
-        view_response_listener: 'force'
+            # xml: true
         formats:
             json: true
-        failed_validation: HTTP_BAD_REQUEST
-
+            xml: true
+            rss: false
+        templating_formats:
+            html: true
+        mime_types:
+            json: ['application/json', 'application/x-json', 'application/vnd.example-com.foo+json']
+            rss: 'application/rss+xml'
+            jpg: 'image/jpeg'
+            png: 'image/png'
+    body_listener: true
+    param_fetcher_listener: force
+    allowed_methods_listener: true
+    access_denied_listener:
+        json: true
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['html','json', 'xml'], fallback_format: html, prefer_extension: true }
     routing_loader:
-         default_format: json
+        default_format: ~
     exception:
-            codes:
-                'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+        messages:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
 
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
 sonata_block:
     default_contexts: [cms]
     blocks:
@@ -137,7 +163,4 @@ fos_user:
     db_driver: mongodb
     firewall_name: main
     user_class: Wizardry\UserBundle\Document\User
-    registration:
-        form:
-            type: wizardry_user_registration
 
