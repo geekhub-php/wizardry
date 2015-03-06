@@ -9,6 +9,11 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class CardAdmin extends Admin
 {
+    public function configure()
+    {
+        $this->setTemplate('edit', 'WizardryUserBundle:SonataAdminBundleCard:edit_javascript_css.html.twig');
+    }
+
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
@@ -28,7 +33,7 @@ class CardAdmin extends Admin
 
         $formMapper
             ->add('name', 'text', array('label' => 'Card Name'))
-            ->add('manaCost', 'text', array('label' => 'Mana Cost'))
+            ->add('manaCost', 'text', array('label' => 'Mana Cost', 'attr' => array('class' => 'mana-cost-field')))
             ->add('convertedManaCost', 'text', array('label' => 'Converted Mana Cost'))
             ->add('file', 'file', ['label' => 'Image'], $fileFieldOptions)
             ->add('rarity', 'choice', array(

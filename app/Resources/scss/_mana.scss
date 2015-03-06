@@ -1,0 +1,22 @@
+$types-list: 'white', 'blue', 'black', 'red', 'green', 'snow', 'colorless';
+
+@each $current-type in $types-list {
+  .type-#{$current-type} {
+    background: url('../bundles/wizardryuser/images/mana/mana-'+ $current-type +'.gif') no-repeat;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.mana-cost {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+    clear: right;
+  }
+}
