@@ -4,32 +4,39 @@ namespace Wizardry\UserBundle\Document;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 
 /**
- * @MongoDB\Document
+ * @ODM\Document()
  */
 class User extends BaseUser
 {
     /**
-     * @MongoDB\Id(strategy="auto")
+     * @ODM\Id(strategy="auto")
      */
     protected $id;
 
     /**
-     * @MongoDB\Field(type="string", name="first_name")
+     * @ODM\Field(type="string")
      */
     protected $firstName;
 
     /**
-     * @MongoDB\Field(type="string", name="last_name")
+     * @ODM\Field(type="string")
      */
     protected $lastName;
+
+    /**
+     * @ODM\ReferenceMany(targetDocument="Wizardry\MainBundle\Document\Card")
+     */
+    protected $card;
 
     /**
      * Get id
      *
      * @return id $id
      */
+
     public function getId()
     {
         return $this->id;
@@ -79,5 +86,39 @@ class User extends BaseUser
     public function getLastName()
     {
         return $this->lastName;
+    }
+    public function __construct()
+    {
+        $this->card = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add card
+     *
+     * @param \Wizardry\MainBundle\Document\Card $card
+     */
+    public function addCard(\Wizardry\MainBundle\Document\Card $card)
+    {
+        $this->card[] = $card;
+    }
+
+    /**
+     * Remove card
+     *
+     * @param \Wizardry\MainBundle\Document\Card $card
+     */
+    public function removeCard(\Wizardry\MainBundle\Document\Card $card)
+    {
+        $this->card->removeElement($card);
+    }
+
+    /**
+     * Get card
+     *
+     * @return \Doctrine\Common\Collections\Collection $card
+     */
+    public function getCard()
+    {
+        return $this->card;
     }
 }

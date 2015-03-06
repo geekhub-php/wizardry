@@ -2,11 +2,14 @@
 
 namespace Wizardry\ApiBundle\Controller;
 
-use FOS\RestBundle\Controller\Annotations\View;
+use Symfony\Component\HttpFoundation\Request;
+use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\Annotations;
+use FOS\RestBundle\Request\ParamFetcherInterface;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 
-class CardsController extends Controller
+class CardsController extends FOSRestController
 {
     /**
      * @ApiDoc(
@@ -14,15 +17,22 @@ class CardsController extends Controller
      *  description="Returns a collection of Cards"
      * )
      *
+     * @Annotations\View(
+     *  templateVar="getCards"
+     * )
+     *
      * @return array
-     * @View()
      */
     public function getCardsAction()
     {
-        $cards = $this->get('doctrine_mongodb')
-            ->getRepository('WizardryMainBundle:Card')
-            ->findAll();
-
+        if($this->getUser() and $this->get('session')->get('user_menu') == true){
+            $cards = $this->getUser()->getCard();
+        }
+        else {
+            $cards = $this->get('doctrine_mongodb')
+                ->getRepository('WizardryMainBundle:Card')
+                ->findAll();
+        }
         return [
             'cards' => $cards,
         ];
@@ -33,7 +43,7 @@ class CardsController extends Controller
      *  description="Returns a single Card"
      * )
      *
-     * @View()
+     * @Annotations\View()
      *
      * @param string $id Card ID
      *
@@ -52,5 +62,30 @@ class CardsController extends Controller
         return [
             'card' => $singleCard,
         ];
+    }
+
+    /**
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Returns a collection of Cards"
+     * )
+     *
+     */
+    public function copyCardToUserAction($user_id, $card_id)
+    {
+
+        $user = $this->getUser();
+
+        $card = $this->get('doctrine_mongodb.odm.document_manager')
+            ->getRepository('WizardryMainBundle:Card')
+            ->find($card_id);
+
+        $user->addCard($card);
+
+        $dm = $this->get('doctrine.odm.mongodb.document_manager');
+        $dm->persist($user);
+        $dm->flush();
+
+        return $this->redirect($this->generateUrl('get_cards'));
     }
 }
