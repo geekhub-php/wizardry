@@ -15,6 +15,7 @@
 *.php~
 /components/
 /node_modules/
+npm-debug.log
 web/assetic
 web/css
 web/fonts
