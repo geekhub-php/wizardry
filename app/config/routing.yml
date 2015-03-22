@@ -27,7 +27,7 @@ sonata_user_profile:
 
 sonata_user_register:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
-    prefix: /registe
+    prefix: /register
 sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
     prefix: /admin
