@@ -31,7 +31,7 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\UserBundle\SonataUserBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

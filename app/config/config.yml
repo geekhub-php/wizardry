@@ -122,6 +122,9 @@ fos_rest:
 
 sonata_user:
     manager_type: mongodb
+    class:
+        user: Wizardry\UserBundle\Document\User
+        group: Wizardry\UserBundle\Document\Group
 
 sonata_block:
     default_contexts: [cms]
@@ -151,7 +154,7 @@ fos_user:
         form:
             type: wizardry_user_registration
     group:
-        group_class:   Sonata\UserBundle\Document\BaseGroup
+        group_class:   Wizardry\UserBundle\Document\Group
         group_manager: sonata.user.mongodb.group_manager
 
     service:
@@ -162,11 +165,3 @@ doctrine:
         types:
             json: Sonata\Doctrine\Types\JsonType
 
-services:
-    sonata.user.admin.group:
-        abstract: true
-        public: false
-
-parameters:
-    sonata.user.admin.user.class: Wizardry\UserBundle\Admin\UserAdmin
-    sonata.user.admin.user.entity: Wizardry\UserBundle\Document\User

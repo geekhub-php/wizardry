@@ -46,8 +46,10 @@ security:
         - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
 
     role_hierarchy:
-        ROLE_ADMIN:       [ROLE_USER, ROLE_SONATA_ADMIN]
+        ROLE_ADMIN:  [ROLE_USER, ROLE_SONATA_ADMIN]
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        SONATA:
+        - ROLE_SONATA_PAGE_ADMIN_PAGE_EDIT  # comment it when using acl
 
     encoders:
          FOS\UserBundle\Model\UserInterface: sha512

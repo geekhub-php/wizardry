@@ -27,12 +27,12 @@ sonata_user_profile:
 
 sonata_user_register:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
-    prefix: /register
-
-sonata_user_change_password:
-    resource: "@SonataUserBundle/Resources/config/routing/sonata_change_password_1.xml"
-    prefix: /profile
-
+    prefix: /registe
 sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
     prefix: /admin
+
+_sonata_admin:
+  resource: .
+  type: sonata_admin
+  prefix: /admin
