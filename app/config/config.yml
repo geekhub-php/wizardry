@@ -165,3 +165,10 @@ doctrine:
         types:
             json: Sonata\Doctrine\Types\JsonType
 
+parameters:
+    sonata.user.admin.user.class: Wizardry\UserBundle\Admin\UserAdmin
+
+services:
+    sonata.user.admin.group:
+        abstract: true
+        public: false

@@ -7,6 +7,10 @@
     <document name="Wizardry\UserBundle\Document\User" collection="fos_user_user" customId="true">
 
         <field fieldName="id" id="true" strategy="INCREMENT" />
+        <field fieldName="firstName" type="string" />
+        <field fieldName="lastName" type="string" />
+        <field fieldName="username" type="string" />
+        <field fieldName="password" type="string" />
 
     </document>
 

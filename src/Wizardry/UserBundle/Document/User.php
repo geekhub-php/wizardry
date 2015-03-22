@@ -31,7 +31,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get id
+     * Get id.
      *
      * @return id $id
      */
@@ -41,19 +41,21 @@ class User extends BaseUser
     }
 
     /**
-     * Set firstName
+     * Set firstName.
      *
      * @param string $firstName
+     *
      * @return self
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
     /**
-     * Get firstName
+     * Get firstName.
      *
      * @return string $firstName
      */
@@ -63,19 +65,21 @@ class User extends BaseUser
     }
 
     /**
-     * Set lastName
+     * Set lastName.
      *
      * @param string $lastName
+     *
      * @return self
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
     /**
-     * Get lastName
+     * Get lastName.
      *
      * @return string $lastName
      */
