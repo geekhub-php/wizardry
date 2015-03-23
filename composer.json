@@ -26,9 +26,12 @@
         "sonata-project/doctrine-mongodb-admin-bundle": "~2.3",
         "nelmio/api-doc-bundle": "~2.7",
         "nelmio/cors-bundle": "~1.4",
-        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "friendsofsymfony/user-bundle": "~1.3",
         "twitter/bootstrap": "3.3.*",
-        "components/jquery": "1.11.1"
+        "components/jquery": "1.11.1",
+        "sonata-project/user-bundle": "2.3.*@dev",
+        "sonata-project/datagrid-bundle": "2.2.*@dev",
+        "sonata-project/easy-extends-bundle": "~2.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

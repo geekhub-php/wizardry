@@ -2,7 +2,7 @@
 
 namespace Wizardry\UserBundle\Document;
 
-use FOS\UserBundle\Model\User as BaseUser;
+use FOS\UserBundle\Document\User as BaseUser;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
@@ -25,8 +25,13 @@ class User extends BaseUser
      */
     protected $lastName;
 
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
-     * Get id
+     * Get id.
      *
      * @return id $id
      */
@@ -36,9 +41,10 @@ class User extends BaseUser
     }
 
     /**
-     * Set firstName
+     * Set firstName.
      *
-     * @param  string $firstName
+     * @param string $firstName
+     *
      * @return self
      */
     public function setFirstName($firstName)
@@ -49,7 +55,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get firstName
+     * Get firstName.
      *
      * @return string $firstName
      */
@@ -59,9 +65,10 @@ class User extends BaseUser
     }
 
     /**
-     * Set lastName
+     * Set lastName.
      *
-     * @param  string $lastName
+     * @param string $lastName
+     *
      * @return self
      */
     public function setLastName($lastName)
@@ -72,7 +79,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get lastName
+     * Get lastName.
      *
      * @return string $lastName
      */

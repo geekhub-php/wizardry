@@ -444,7 +444,9 @@ class Card
 
     /**
      * Set set.
-     * @param  Wizardry\MainBundle\Document\Set $set
+     *
+     * @param Wizardry\MainBundle\Document\Set $set
+     *
      * @return self
      */
     public function setSet(\Wizardry\MainBundle\Document\Set $set)

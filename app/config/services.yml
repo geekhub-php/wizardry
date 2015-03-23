@@ -7,3 +7,10 @@ services:
 #    service_name:
 #        class: MainBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    sonata.user.serializer.handler.user:
+         class: Sonata\UserBundle\Serializer\UserSerializerHandler
+         tags:
+         - { name: jms_serializer.subscribing_handler }
+         arguments:
+         - [ sonata.user.mongodb.user_manager ]
