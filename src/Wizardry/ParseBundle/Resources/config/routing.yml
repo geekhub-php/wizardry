@@ -1,3 +1,0 @@
-wizardry_parse_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: WizardryParseBundle:Default:index }
