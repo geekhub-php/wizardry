@@ -2,6 +2,10 @@ index_page:
     pattern:  /
     defaults: { _controller: "WizardryMainBundle:Default:index" }
 
+app_set_show:
+    pattern:  /block/{id}
+    defaults: { _controller: "WizardryMainBundle:Block:show" }
+
 
 app_set_show:
     pattern:  /set/{id}
