@@ -1,3 +1,32 @@
 index_page:
     pattern:  /
-    defaults: { _controller: WizardryMainBundle:Default:index }
+    defaults: { _controller: "WizardryMainBundle:Default:index" }
+
+
+app_set_show:
+    pattern:  /set/{id}
+    defaults: { _controller: "WizardryMainBundle:Set:show" }
+
+app_job_new:
+    path:     /new
+    defaults: { _controller: "AppJoboardBundle:Job:new" }
+
+app_job_create:
+    path:     /create
+    defaults: { _controller: "AppJoboardBundle:Job:create" }
+    methods:  POST
+
+app_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppJoboardBundle:Job:edit" }
+
+app_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppJoboardBundle:Job:update" }
+    methods:  [POST, PUT]
+
+app_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppJoboardBundle:Job:delete" }
+    methods:  [POST, DELETE]
+

@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+<table class="records_list table table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Сет</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for entity in set %}
+        <tr class="{{ cycle(["even", "odd"], loop.index) }}">
+            <td>{{ entity.id }}</td>
+
+        </tr>
+    {% endfor %}
+
+{% endblock %}
