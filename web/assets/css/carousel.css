@@ -43,6 +43,9 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
+    right:50%;
+    left:10%;
+    text-align:left;
 }
 
 /* Declare heights because of positioning of img element */
@@ -72,7 +75,7 @@ body {
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 .marketing h2 {
     font-weight: normal;

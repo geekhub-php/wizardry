@@ -1,47 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
     <title>{% block title %}Wizardry - catalog of MTG cards{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css" media="all">
+    <!-- Bootstrap core CSS -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/carousel.css" rel="stylesheet">
     {% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
+<!-- NAVBAR
+================================================== -->
 <body>
-<div id="header" class="container">
-    <div class="jumbotrone"></div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2 id="logo">Wizardry</h2>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Wizardry project</a>
                 </div>
-                <div class="col-lg-6">
-                    <input type="text" class="form-control" placeholder="Поиск по картам">
-                </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-default">Искать</button>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                        <div class="navbar-form navbar-right" style="margin-right: 10px;">
+                            <p>
+                                <a class="btn btn-success" href="/login" role="button">Sign in</a>
+                                <a class="btn btn-primary" href="/register" role="button">Sign up</a>
+                            </p>
+                        </div>
+
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 text-right">
-            <a href="" class="btn btn-success">Создать свою колоду</a>
-        </div>
+
     </div>
 </div>
 
-<div class="container">
-    {% block content %}{% endblock %}
-</div>
 
-<div id="footer" class="container">
-    <a href="">О проекте</a>
-    <a href="../api/doc">API</a>
-</div>
+{% block content %}{% endblock %}
+
+
+    <!-- FOOTER -->
+    <footer style="padding-top: 50px">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015, GeekHub &middot;  <a href="../api/doc">API</a> &middot; </p>
+    </footer>
+
+</div><!-- /.container -->
 
 {% block javascripts %}
-    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
 {% endblock %}
+
 </body>
 </html>

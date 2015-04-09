@@ -6,21 +6,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Doctrine\ODM\MongoDB\DocumentRepository;
 
-class SetController extends Controller
+class BlockController extends Controller
 {
     public function showAction($id)
     {
 
-        $set = $this->get('doctrine_mongodb')
-            ->getRepository('WizardryMainBundle:Set')
+        $block = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Block')
             ->find($id);
 
-        if (!$set) {
+        if (!$block) {
             throw $this->createNotFoundException();
         }
 
-        return $this->render('WizardryMainBundle:Set:set.html.twig', array(
-            'set' => $set,
+        return $this->render('WizardryMainBundle:Block:block.html.twig', array(
+            'block' => $block,
         ));
     }
 }

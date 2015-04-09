@@ -11,12 +11,12 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        $sets = $this->get('doctrine_mongodb')
-            ->getRepository('WizardryMainBundle:Set')
+        $blocks = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Block')
             ->findAll();
 
-        return $this->render('WizardryMainBundle:Set:index.html.twig', array(
-            'sets' => $sets,
+        return $this->render('WizardryMainBundle:Block:index.html.twig', array(
+            'blocks' => $blocks,
         ));
     }
 }

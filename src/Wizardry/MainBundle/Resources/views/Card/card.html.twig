@@ -7,20 +7,27 @@
 
 
 {% block content %}
-<table class="records_list table table-bordered">
-    <thead>
-    <tr>
-        <th>ID {{ card.id }}</th>
-        <th>Сет</th>
+    <div class="container marketing">
+    <hr class="featurette-divider">
 
-    </tr>
-    </thead>
-    <tbody>
-    {% for entity in card %}
-        <tr class="{{ cycle(["even", "odd"], loop.index) }}">
-            <td>{{ entity.id }}</td>
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/312x445/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">{{ card.name }}</h2>
+            <p class="lead">
+            <p>type: {{ card.type }}</p>
+            <p>Mana Cost: {{ card.manacost }}</p>
+            <p>Converted Mana Cost: {{ card.convertedmanacost }}</p>
+            <p>sub type: {{ card.subtype }}</p>
+            <p>rarity: {{ card.rarity }}</p>
+            <p>"{{ card.description }}"</p>
+            <p>- {{ card.artdescription }}</p>
+            <p>Illus. {{ card.artist }}</p>
+            </p>
+        </div>
+    </div>
 
-        </tr>
-    {% endfor %}
 
 {% endblock %}

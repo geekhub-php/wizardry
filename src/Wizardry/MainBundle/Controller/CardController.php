@@ -15,8 +15,6 @@ class CardController extends Controller
             ->getRepository('WizardryMainBundle:Card')
             ->find($id);
 
-        var_dump($card); exit;
-
         if (!$card) {
             throw $this->createNotFoundException();
         }

@@ -1,26 +1,29 @@
 {% extends "::base.html.twig" %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
-{% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+    {% endblock %}
 
 
-{% block content %}
-<table class="records_list table table-bordered">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Сет</th>
+    {% block content %}
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    </tr>
-    </thead>
-    <tbody>
-    {% for entity in set.cardcontain %}
-        <tr class="{{ cycle(["even", "odd"], loop.index) }}">
-            <td>{{ entity.id }}</td>
-            <td><a href="{{ path('app_card_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
-        </tr>
-    {% endfor %}
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="padding-top: 150px">
+            {% for doc in set.cardcontain %}
+                <div class="col-lg-4">
+                    <h2>{{ doc.name }}</h2>
+                    <p>type: {{ doc.type }}</p>
+                    <p>sub type: {{ doc.subtype }}</p>
+                    <p>rarity: {{ doc.rarity }}</p>
+                    <p><a class="btn btn-default" href="{{ path('app_card_show', { 'id': doc.id }) }}" role="button">View card &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
 
 {% endblock %}
