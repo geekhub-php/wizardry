@@ -19,7 +19,7 @@ app_page_about:
     pattern:  /about
     defaults: { _controller: "WizardryMainBundle:Page:about" }
 
-app_page_about:
+app_page_rules:
     pattern:  /rules
     defaults: { _controller: "WizardryMainBundle:Page:rules" }
 
