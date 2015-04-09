@@ -16,10 +16,10 @@
     </tr>
     </thead>
     <tbody>
-    {% for entity in set %}
+    {% for entity in set.cardcontain %}
         <tr class="{{ cycle(["even", "odd"], loop.index) }}">
             <td>{{ entity.id }}</td>
-
+            <td><a href="{{ path('app_card_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
         </tr>
     {% endfor %}
 
