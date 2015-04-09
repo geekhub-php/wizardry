@@ -1,0 +1,36 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container marketing">
+
+    <div class="panel-separator"></div>
+
+    <!-- wiz_bean_content_html_block -->
+
+    <div class="bean_block bean_block_html bean--wiz-content-html-block ">
+        <div class="page-width">
+            <div class="spacer">
+
+                <p>A comprehensive document outlining each facet of the rules became necessary. This document is known as Magic’s Comprehensive Rulebook. It’s meant to be consulted when specific rules questions come into play and neither the tournament’s organizers nor judges have the answer.</p>
+
+                <p>Last Updated: March 27, 2015</p>
+
+                <p style="opacity: 1;">The "Comp. Rules" are the ultimate authority for the Magic game, but you won&rsquo;t usually need to refer to them except in specific cases or during competitive games. They're not meant to be read from start to finish.</p>
+
+                <p style="opacity: 1;"><a class="cta" href="http://media.wizards.com/2015/docs/MagicCompRules_20150327.docx"><span class="txt">DOCX</span></a> &nbsp;&nbsp;&nbsp;</p>
+
+                <p style="opacity: 1;"><a class="cta" href="http://media.wizards.com/2015/docs/MagicCompRules_20150327.pdf" target="_blank"><span class="txt">PDF</span> </a></p>
+
+                <p style="opacity: 1;"><span class="txt"><a class="cta" href="http://media.wizards.com/2015/docs/MagicCompRules_20150327.txt" target="_blank"><span class="txt">TXT</span></a></span></p>
+            </div>
+        </div>
+    </div>
+
+        {% endblock %}

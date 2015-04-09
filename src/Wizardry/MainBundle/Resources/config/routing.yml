@@ -15,3 +15,13 @@ app_card_show:
     pattern:  /card/{id}
     defaults: { _controller: "WizardryMainBundle:Card:show" }
 
+app_page_about:
+    pattern:  /about
+    defaults: { _controller: "WizardryMainBundle:Page:about" }
+
+app_page_about:
+    pattern:  /rules
+    defaults: { _controller: "WizardryMainBundle:Page:rules" }
+
+
+
