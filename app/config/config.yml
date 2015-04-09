@@ -161,7 +161,18 @@ fos_user:
         user_manager: sonata.user.mongodb.user_manager
 
 doctrine:
+    orm:
+        auto_mapping: true
     dbal:
+        connections:
+            default:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
         types:
             json: Sonata\Doctrine\Types\JsonType
 
@@ -172,3 +183,29 @@ services:
     sonata.user.admin.group:
         abstract: true
         public: false
+
+hwi_oauth:
+    #this is my custom user provider, created from FOSUBUserProvider - will manage the
+    #automatic user registration on your site, with data from the provider (facebook. google, etc.)
+    #and also, the connecting part (get the token and the user_id)
+    connect:
+        account_connector: link_pub_user_provider
+    # name of the firewall in which this bundle is active, this setting MUST be set
+    firewall_name: main
+    fosub:
+        username_iterations: 30
+        properties:
+            # these properties will be used/redefined later in the custom FOSUBUserProvider service.
+            vkontakte:  vkontakte_id
+            facebook: facebook_id
+    resource_owners:
+        vkontakte:
+            type:                vkontakte
+            client_id:           "%vkontakte_app_id%"
+            client_secret:       "%vkontakte_app_secret%"
+            scope:               "email"
+        facebook:
+            type:                facebook
+            client_id:           "%facebook_app_id%"
+            client_secret:       "%facebook_app_secret%"
+            scope:

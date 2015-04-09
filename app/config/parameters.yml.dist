@@ -18,3 +18,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    facebook_app_id: 1582255878683655
+    facebook_app_secret: ee56f07484668b657a87225ea4f29041
+    vkontakte_app_id: 4773567
+    vkontakte_app_secret: qGrwUontdJ6yOs8pl8IW

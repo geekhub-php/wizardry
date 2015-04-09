@@ -10,3 +10,7 @@ _sonata_admin:
     resource: .
     type: sonata_admin
     prefix: /admin
+
+wizardry_user_homepage:
+    pattern:  /
+    defaults: { _controller: WizardryUserBundle:Default:index }
