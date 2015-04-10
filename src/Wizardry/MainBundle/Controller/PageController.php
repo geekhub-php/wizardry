@@ -19,4 +19,10 @@ class PageController extends Controller
 
         return $this->render('WizardryMainBundle:Page:rules.html.twig');
     }
+
+    public function gameplayAction()
+    {
+
+        return $this->render('WizardryMainBundle:Page:gameplay.html.twig');
+    }
 }

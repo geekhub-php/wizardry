@@ -23,5 +23,8 @@ app_page_rules:
     pattern:  /rules
     defaults: { _controller: "WizardryMainBundle:Page:rules" }
 
+app_page_gameplay:
+    pattern:  /gameplay
+    defaults: { _controller: "WizardryMainBundle:Page:gameplay" }
 
 
