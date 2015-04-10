@@ -8,7 +8,6 @@ Here we need to describe some information about project
 ##Charity project for Cherkassy Drama Theatre
 Theirs new outstanding website!
 
-Repertoire of Cherkassy Ukrainian Music and Drama Theatre can satisfy the most demanding audience for theatre works in different genres. Over the years the Theatre has performed over 450 different performances, including most of them (300) being a work of modern domestic and foreign drama, about 75 performances being based on the works by Ukrainian classics and over 50 performances - on the works by foreign classics.
 
 ##Installation
 ------------
