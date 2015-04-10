@@ -1,5 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends "::base.html.twig" %}
 
-{% block body %}
-    Homepage.
+{% block stylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block content %}
+    <table class="records_list table table-bordered">
+        <thead>
+        <tr>
+            <th>Карта</th>
+            <th>Сет</th>
+            <th>Блок</th>
+        </tr>
+        </thead
+                >
+        <tbody>
+
+        </tbody>
+    </table>
 {% endblock %}

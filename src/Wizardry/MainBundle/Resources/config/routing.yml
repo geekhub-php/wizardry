@@ -1,3 +1,27 @@
 index_page:
     pattern:  /
-    defaults: { _controller: WizardryMainBundle:Default:index }
+    defaults: { _controller: "WizardryMainBundle:Default:index" }
+
+app_block_show:
+    pattern:  /block/{id}
+    defaults: { _controller: "WizardryMainBundle:Block:show" }
+
+
+app_set_show:
+    pattern:  /set/{id}
+    defaults: { _controller: "WizardryMainBundle:Set:show" }
+
+app_card_show:
+    pattern:  /card/{id}
+    defaults: { _controller: "WizardryMainBundle:Card:show" }
+
+app_page_about:
+    pattern:  /about
+    defaults: { _controller: "WizardryMainBundle:Page:about" }
+
+app_page_rules:
+    pattern:  /rules
+    defaults: { _controller: "WizardryMainBundle:Page:rules" }
+
+
+

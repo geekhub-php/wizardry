@@ -1,0 +1,109 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- Carousel
+     ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{ asset('../../assets/img/EN_AboutTheGame_Header_12.jpg') }}" alt="About">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>ABOUT THE GAME</h1>
+                    </div>
+                </div>
+            </div>
+
+    </div><!-- /.carousel -->
+
+        <div class="container marketing">
+
+    <div class="panel-separator" style="padding-top: 40px"></div>
+
+
+    <!-- content type wiz-content-block-type-a -->
+
+    <div class="slides page-width">
+        <h2><span>GAMES HISTORY</span></h2>
+        <img class="right" src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_1-Beginning_Rotator.png" alt=""><p>As it turns out, the game almost didn&rsquo;t happen. In 1991, Wizards of the Coast was busy printing roleplaying games and supplements, and operated out of Peter Adkison&rsquo;s basement. Adkison was the owner and CEO of Wizards when he was approached by Dr. Richard Garfield, a doctoral candidate in combinatorial mathematics. Garfield was interested in having Wizards publish his &ldquo;RoboRally&rdquo; board game design.</p>
+
+        <p>Adkison liked RoboRally (and would later produce it through Wizards) but he felt at the time that Wizards didn&rsquo;t possess the resources or technical know-how to produce a board game. He asked Garfield to instead come up with a simple game that could be played in minutes, and that was portable enough that people could play it while &ldquo;waiting in line at conventions.&rdquo;</p>
+
+        <p>Garfield went back to his workshop and emerged with the very first version of the game we now know as Magic.</p>
+        <p class="actions"></p>
+    </div>
+
+
+
+
+
+
+    <div class="panel-separator"></div>
+
+
+    <!-- content type wiz-content-block-type-a -->
+
+    <div class="slides page-width">
+        <h2><span>THE EARLY DAYS</span></h2>
+        <img class="right" src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_2-EarlyDays_Rotator.png" alt=""><p>Adkison saw the potential of the game and asked Garfield to begin working on it in earnest. Garfield was still getting his doctorate at the University of Pennsylvania, so he used his free time and a cadre of volunteer playtesters to develop the game.</p>
+
+        <p>Magic debuted in 1993 at the Origins Game Fair in Dallas, TX. It was an instant success&mdash;players bought up the full stock of what had been believed to be a year&rsquo;s supply of cards, and a reprint had to be ordered immediately.</p>
+
+        <p>As the popularity of the game spread, Wizards continually evolved to meet the needs of the players.</p>
+
+        <p>A robust tournament system known as the DCI [LINK to: DCI page] was developed by Skaff Elias. It set standards for how tournaments were run, and kept track of player&rsquo;s stats. It was among the first of its kind in the hobby gaming industry.</p>
+
+        <p>In 1996, the&nbsp;<a href="http://magic.wizards.com/content/eventsscheduleprotours">Magic Pro Tour</a>&nbsp;was born. The Pro Tour is an invite-only tournament structure offering over $1 million in prizes a year. To qualify for the series, there is a worldwide system of qualifier tournaments and large events that allow players to earn a spot on the circuit.</p>
+
+        <p>The game was first published only in English, but that would soon change as Italian, French, German, and Spanish were added. As the game grew, six additional languages entered the mix: Japanese, Portuguese, Russian, Chinese Traditional, Chinese Simplified, and Korean.</p>
+        <p class="actions"></p>
+    </div>
+
+
+
+
+
+
+    <div class="panel-separator"></div>
+
+
+    <!-- content type wiz-content-block-type-a -->
+
+    <div class="slides page-width">
+        <h2><span>THE DIGITAL AGE</span></h2>
+        <img class="right" src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_3-DigitalAge_Rotator.png" alt=""><p>Though Magic had shown up on computer screens before with a few casual video games, it truly entered the digital age in 2002 with the release of&nbsp;<a href="http://magic.wizards.com/content/magic-online">Magic Online</a>.</p>
+
+        <p>With&nbsp;<a href="http://magic.wizards.com/content/duels-of-the-planeswalkers">Duels of the Planeswalkers</a>, Magic branched out to gaming consoles like Xbox. Unlike Magic Online, Duels players play against AI opponents, allowing them to hone their skills before shuffling any physical cards.</p>
+
+        <p>The digital age accelerated Magic like nothing else. Players talked about strategy and posted decklists as collectors hunted down rare cards online. As a result, players got better and the game got better&mdash;a true gathering, indeed.</p>
+        <p class="actions"></p>
+    </div>
+
+
+
+
+
+
+    <div class="panel-separator"></div>
+
+
+    <!-- content type wiz-content-block-type-a -->
+
+    <div class="slides page-width">
+        <h2><span>TODAY AND BEYOND</span></h2>
+        <img class="right" src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_4-TodayBeyond_Rotator.png" alt=""><p>Today, Magic is bigger than ever. Over 12 million players across the globe share a passion for collecting, deckbuilding, and coming together to play Magic. That&rsquo;s what Magic is all about, really: bringing people together in the spirit of friendship, competition, and fun.</p>
+
+        <p>As to the future, Magic is a game that is constantly adding new cards, new strategies, and new challenges. What will the next 20 years bring? Check out&nbsp;<a href="http://magic.wizards.com/content/duels">Duels of the Planeswalkers</a>&nbsp;as your first step into the game and become a part of the legacy.</p>
+        <p class="actions"></p>
+    </div>
+
+
+        {% endblock %}
