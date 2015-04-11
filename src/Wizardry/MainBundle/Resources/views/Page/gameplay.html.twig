@@ -1,0 +1,354 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- Carousel
+     ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{ asset('../../assets/img/EN_History_InlineR_A_0.jpg') }}" alt="About">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>HOW TO PLAY</h1>
+                    </div>
+                </div>
+            </div>
+
+    </div><!-- /.carousel -->
+
+        <div class="container marketing">
+
+    <div class="panel-separator" style="padding-top: 40px"></div>
+
+    <!-- wiz-content-rotator-block -- upper_tabbed_with_arrow -->
+
+
+    <div class="page-width">
+
+        <h2><span>HOW TO WIN</span></h2>
+
+
+        <div class="slides page-width">
+            <dl class="showHideListItems" data-showhidelistitems-options="{defaultItem:0}">
+                <dd>
+                    <div class="wrap">
+                        <h3>DEFEAT YOUR OPPONENT</h3>
+                        <p>Each player starts the game with 20 life. Knock your opponent down to 0 life, and you win. The most common way to do this is to summon creatures and attack with them.</p>
+                        <p>Creature cards are the most important part of many Magic decks. They&rsquo;re really easy to spot&mdash;just look at the lower right of a card. If you see a pair of numbers separated by a slash, you&rsquo;ve got a creature card. Once it&rsquo;s on the battlefield, a creature continues to attack and defend for you until your opponent can find a way to take it out.</p>
+                        <p>Most games become a race to see who can deal the most damage first. Summoning the best creatures will help you win that race every time. Check out the section on casting creature spells.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_DefeatOpponent_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>BUILD RESOURCES</h3>
+                        <p>Casting spells is at the heart of all Magic games. Some creatures are small and fast, while others are powerful monstrosities of epic proportions. So how does it all balance out? That&rsquo;s where mana comes in.</p>
+
+                        <p>Mana is the basic resource in Magic. Each card costs a certain amount of mana, and the more mana a card costs, the more powerful it usually is. Mana comes from land cards.</p>
+
+                        <p>Land cards have a distinctive look to them&mdash;you can see some <a href="http://gatherer.wizards.com/Pages/Search/Default.aspx?output=spoiler&amp;method=visual&amp;sort=abc+&amp;action=advanced&amp;type=+%5b%22Land%22%5d">here</a>. You&rsquo;ll want a lot of them in your Magic decks since they give you the mana to summon your creatures and cast other powerful spells. You can only play one land card per turn, and that&rsquo;s where the balance comes in&mdash;the more epic the creature is, the longer it will take to summon!</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_BuildResources_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>COOL SPELLS</h3>
+                        <p>Creature cards may be the rock stars of most Magic decks, but there are plenty of supporting players. Since creatures attack while on the battlefield, your opponent can adjust their strategy to counter them. Other spells, like sorceries and enchantments, can affect the game in powerful ways. And instant spells have the advantage of surprise. When cast at the right time, they can really put your opponent on the defensive.</p>
+
+                        <p>For example, say you&rsquo;re attacking with a small creature, while your opponent has a large creature ready to block it. Normally, the larger creature would obliterate your smaller attacker. But you&rsquo;ve got a trick up your sleeve: an instant spell called &ldquo;Giant Growth.&rdquo; As its name implies, it turns your little attacker into a force to be reckoned with, and now your opponent&rsquo;s blocking creature is in serious trouble!</p>
+
+                        <p>Interested? Check out the rules for other spells <a href="http://media.wizards.com/2014/docs/EN_M15_QckStrtBklt_LR_Crop.pdf">here</a>.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_CoolSpells_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>GATHER YOUR ALLIES</h3>
+                        <p>During a game of Magic, you take on the role of a Planeswalker, with an arsenal of powerful creatures and crushing spells at your disposal. But where would you be without allies?</p>
+
+                        <p>Over its 20 years, Magic&rsquo;s storyline has crossed dozens of planes of existence, each one an entire world with its own heroes, villains, and struggles. Players have seen a host of Vampires, Werewolves, and Zombies push humanity to the brink in <a href="/story/planes/innistrad">Innistrad</a>, ninja and samurai waging war in <a href="/story/planes/kamigawa">Kamigawa</a>, and even a war between rival brothers push reality to the brink of disaster in <em>Urza's Saga</em>. Some of the most iconic characters, like the Planeswalkers <a href="/content/planeswalker/jace-beleren">Jace Beleren</a> and <a href="/content/planeswalker/chandra-nalaar">Chandra Nalaar</a>, have their own cards you can include in your duels. These cards are hard to find, but once you cast them, they can often turn the tide of a game. That&rsquo;s what friends are for!</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_GatYamllies_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>TOOLS OF THE TRADE: AURAS</h3>
+                        <p>You&rsquo;ve assembled an army of creatures. Now you need an arsenal of weapons. Magic&rsquo;s got you covered, from Aura and Equipment cards that buff one of your creatures, to enchantment cards that can affect the entire battlefield.</p>
+
+                        <p>Auras are special cards that you attach to one of your creatures, and they usually give that creature a size boost or new abilities. For example, Flight gives a creature flying, while Trollhide makes a creature much bigger and much harder to kill. There are even some sneaky Auras you can attach to your opponent&rsquo;s creatures to weaken them. Auras stay on a creature until it dies or something takes the Aura out.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_ToolsAuras_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>TOOLS OF THE TRADE: EQUIPMENT</h3>
+                        <p>Equipment cards are very similar to Auras, but they have the benefit of staying on the battlefield if the creature carrying them dies. You can even move them from creature to creature as you see fit&mdash;a great way to keep your opponent guessing. Give one of your creatures an <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Accorder%27s+Shield" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Accorder%27s+Shield">Accorder's Shield</a> and watch it charge into battle unscathed, or let it wield a <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Fireshrieker" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Fireshrieker">Fireshrieker</a> to devastate any creature it battles!</p>
+
+                        <p>Enchantment cards are another way to alter the rules of the game. You don&rsquo;t attach them to anything, they simply stay out on the battlefield. <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Into+the+Wilds" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Into+the+Wilds">Into the Wilds</a> can give you extra lands each turn, while <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Dismiss+into+Dream" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Dismiss+into+Dream">Dismiss into Dream</a> turns your opponent&rsquo;s creatures into brittle Illusions.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowToWin_ToolsEquipment_TallRotator_0.png"></div>
+                </dd>
+            </dl></div>
+
+
+    </div>
+
+
+
+    <div class="panel-separator"></div>
+
+    <!-- wiz-content-rotator-block -- upper_tabbed_with_arrow -->
+
+
+    <div class="page-width">
+
+        <h2><span>HOW COMBAT WORKS</span></h2>
+
+
+        <div class="slides page-width">
+            <dl class="showHideListItems" data-showhidelistitems-options="{defaultItem:0}">
+                <dd>
+                    <div class="wrap">
+                        <h3>ATTACK WITH CREATURES</h3>
+                        <p>Summoning a seething horde of creatures is only half the task. If you want to win Magic games, you&rsquo;ve got to attack!</p>
+
+                        <p>Your opponent starts the game with 20 life, so you&rsquo;ll need to attack again and again over time to seal your victory. This is why creatures are such a good deal: they can potentially deal a ton of damage over time if left unchecked.</p>
+
+                        <p>It&rsquo;s important to note that in combat, you can&rsquo;t attack your opponent&rsquo;s creatures directly. You always attack your opponent, and it&rsquo;s up to him or her to decide how, or even if, to block. This means it&rsquo;s a good idea to check the table before you attack and ask yourself how you would block if you were in your opponent&rsquo;s seat.</p>
+
+                        <p>Since your opponent can block any way they see fit, there will always be a bit of mystery to how an attack will play out. That&rsquo;s OK, just remember one simple rule: When in doubt, attack!</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowCombatWorks_AttackCreatures_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>BLOCKING THE ATTACK</h3>
+                        <p>Once you&rsquo;ve decided to attack, your opponent gets to choose how to block your attack. Sometimes you&rsquo;ll get off easy and your attack will go undefended. When that happens, your opponent will lose some life. Other times, your attack will run straight into a block by an opponent&rsquo;s creature. And then the vicious creature-against-creature battle begins!</p>
+
+                        <p>You get several opportunities during combat to be tricky by casting instant spells or activating abilities: before attackers are chosen, just after attackers are chosen, or even after blockers are chosen. Casting an instant spell to boost your creature&rsquo;s power or to take out a key opponent&rsquo;s creature in the middle of combat can really wreck their plans. But keep in mind: they can do the same to you!</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowCombatWorks_BlockingAttack_TallRotator_0.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>DEALING DAMAGE</h3>
+                        <p>Attacking and blocking creatures have been declared, and you and your opponent have used any nasty tricks you had up your sleeves. Now, it&rsquo;s time to deal damage.</p>
+
+                        <p>Attacking creatures that didn&rsquo;t get blocked will deal damage directly to your opponent&mdash;you&rsquo;re that much closer to victory! If a creature was blocked, it deals damage to its blocker instead of your opponent. Blocking creatures deal their damage back to the creatures they blocked.</p>
+
+                        <p>If a creature is dealt damage at least equal to its toughness, it&rsquo;s destroyed and sent to the ominous-sounding graveyard. (You may know it simply as the discard pile, but &ldquo;graveyard&rdquo; sounds so much cooler.)</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowCombatWorks_DealingDamage_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>AFTER COMBAT</h3>
+                        <p>After combat ends, any creatures that survive remain on the battlefield to fight another day. That&rsquo;s one of the reasons that creatures are such a popular way to achieve victory: they remain a powerful force on the battlefield until they&rsquo;re destroyed.</p>
+
+                        <p>But don&rsquo;t worry about keeping track of damage for too long&mdash;creatures heal at the end of every turn. If you have spells or other ways to deal damage, you can finish off wounded creatures before the end of the turn.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_HowCombatWorks_AfterCombat_TallRotator.png"></div>
+                </dd>
+            </dl></div>
+
+
+    </div>
+
+
+
+    <div class="panel-separator"></div>
+
+    <!-- wiz-content-rotator-block -- upper_tabbed_with_arrow -->
+
+
+    <div class="page-width">
+
+        <h2><span>SPELLS AND GAMEPLAY</span></h2>
+
+
+        <div class="slides page-width">
+            <dl class="showHideListItems" data-showhidelistitems-options="{defaultItem:0}">
+                <dd>
+                    <div class="wrap">
+                        <h3>CASTING SPELLS</h3>
+                        <p>During your Magic games, you&rsquo;re going to be summoning creatures, sending them into battle, flinging spells back and forth&mdash;all while doing your best to thwart your opponent. The action will get intense from time to time, and that&rsquo;s part of the fun! But knowing when you can cast something and when you can&rsquo;t is important, and that&rsquo;s where the parts of the turn come in.</p>
+
+                        <p>Magic&rsquo;s turn sequence breaks down each player&rsquo;s turn into phases to add order to the chaos. The phases always follow the same sequence, so you&rsquo;ll get used to them after only a few games.</p>
+
+                        <p>The main phase is where you&rsquo;ll do most of your dirty work, <a href="http://media.wizards.com/2014/docs/EN_M15_QckStrtBklt_LR_Crop.pdf">playing lands and casting spells</a>. In fact, it&rsquo;s such an important phase that you get two of them every turn. One happens before you attack with creatures, and the other happens right after combat.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_CastingSpells_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>THE REST OF THE TURN, PT. 1</h3>
+                        <p>Now that you&rsquo;ve learned all about combat and the main phase, let&rsquo;s check out the rest of the turn.</p>
+
+                        <p>Your turn always starts with the beginning phase, broken down into three steps. First, during the untap step, you&rsquo;ll untap (straighten out) any tapped cards you have. Usually nothing happens during the next step, the upkeep step, but some cards have abilities that happen then. Finally, at the beginning of the draw step, you&rsquo;ll draw a card from your library (your deck). You can also cast instant spells or activate abilities during your upkeep and draw steps.</p>
+
+                        <p>Next up is the main phase. We&rsquo;ve already covered this in another section. The quick version is that the main phase allows you to play a land card from your hand or cast spells.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_RestTurnsPt1_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>THE REST OF THE TURN, PT. 2</h3>
+                        <p>The combat phase comes next, and this is when you&rsquo;ll attack your opponent with your creatures. A creature can&rsquo;t attack the first turn it&rsquo;s on the battlefield, but if you had that creature when your turn began, it can attack!</p>
+
+                        <p>After combat, you&rsquo;ll get a second main phase. If you didn&rsquo;t play a land during your first main phase, you can do so now. You can also cast spells during this phase. It&rsquo;s often a good idea to cast creature spells during your second main phase and not your first. This keeps your opponent working on as little information as possible&mdash;if you drop a large creature before your combat phase, it may change how they decide to block. And since you can&rsquo;t attack with a creature on the first turn it&rsquo;s on the battlefield, it&rsquo;s often better to wait until the second main phase to cast that creature spell.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_RestTurnsPt2_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>THE REST OF THE TURN, PT. 3</h3>
+                        <p>Finally, there&rsquo;s the ending phase, and as its name implies, here is where the turn wraps up. There are two steps here. The end step is your last opportunity for anyone to cast instant spells or activate abilities before the turn ends. Often, if you have an instant spell you want to cast during your opponent&rsquo;s turn, you&rsquo;ll cast it during the end step to give them the least amount of time to react. Finally, there&rsquo;s the cleanup step, where a little bit of housekeeping takes place. Creatures with lingering damage heal, and any abilities that say &ldquo;until the end of the turn&rdquo; end. Once you&rsquo;re done with your ending phase, let your opponent know it&rsquo;s time for their turn.</p>
+
+                        <p>That&rsquo;s it! These five phases ensure that the turn flows smoothly, and the action is always moving forward. Give it a quick try with <em><a href="/content/duels-of-the-planeswalkers">Duels of the Planeswalkers</a></em>!</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_RestTurnsPt3_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>TRICKS AND RESPONSES, PT. 1</h3>
+                        <p>One of Magic&rsquo;s strongest components, and a key to its high level of strategy, is that you always get a chance to respond to what your opponent is doing. Every spell they want to cast, every ability they want to use, you get the chance to jump in and mess with their plans. Of course, they can do the same to you, and you can even respond to their response!</p>
+
+                        <p>So how is all this handled? That&rsquo;s where the stack comes in.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_TricksPt1_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>TRICKS AND RESPONSE, PT. 2</h3>
+                        <p>The stack is Magic&rsquo;s way of keeping track of what happens when. Even though your main phase is where you&rsquo;ll do most of your spell-slinging, there are a ton of spells and abilities that can appear during either player&rsquo;s turn, and the stack keeps it all in order.</p>
+
+                        <p>Whenever you or your opponent does anything&mdash;like cast a creature spell&mdash;that card doesn&rsquo;t go directly to the battlefield. Instead, it goes to the stack. Imagine the stack as a holding cell: the spell waits there until each player has had an opportunity to respond by casting instant spells or activating abilities. If it&rsquo;s your turn, you have the first chance to respond to your own spells and abilities.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_TricksPt2_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>TRICKS AND RESPONSES, PT. 3</h3>
+                        <p>Once no one wants to add any more spells or abilities to the stack, the spells and abilities there start to resolve, starting with the most recent response. So say you cast a spell, then your opponent responds with an instant spell, and then you respond to that with an ability. Once no player wants to respond, your ability resolves first, then your opponent&rsquo;s spell will resolve, and finally your original spell. The last spell or ability to go on the stack is the first one that will resolve. Magic is a game of threats, answers, and answers to those answers!</p>
+
+                        <p><em><a href="/content/duels-of-the-planeswalkers">Duels of the Planeswalkers</a></em> is hands-down the best way to learn about the stack. For now just keep in mind that whenever your opponent does something, you can say, &ldquo;Hang on, I&rsquo;ve got a response.&rdquo;</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_Spells%26Gameplay_TricksPt3_TallRotator.png"></div>
+                </dd>
+            </dl></div>
+
+
+    </div>
+
+
+
+    <div class="panel-separator"></div>
+
+    <!-- wiz-content-rotator-block -- upper_tabbed_with_arrow -->
+
+
+    <div class="page-width">
+
+        <h2><span>TIME TO START YOUR GAME</span></h2>
+
+
+        <div class="slides page-width">
+            <dl class="showHideListItems" data-showhidelistitems-options="{defaultItem:0}">
+                <dd>
+                    <div class="wrap">
+                        <h3>SET UP THE TABLE</h3>
+                        <p>Once you&rsquo;re ready to start a game, it helps to know how most players organize the battlefield.</p>
+
+                        <p>Start with your library (your deck). Give it a good series of shuffles and let your opponent cut it, if they wish. Then place it off to the side, with enough space near it for your graveyard.</p>
+
+                        <p>Many players put lands nearest them on the table, with other cards closer to your opponent. This way, both you and your opponent can clearly see what cards are on the battlefield, and your creatures are at the center of the action. Other cards on the battlefield, like artifacts or enchantments, are usually placed off to the side of your creatures.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_TimeStartGame_SetUpTable_TallRotator.png"></div>
+                </dd>
+
+                <dd>
+                    <div class="wrap">
+                        <h3>READING THE CARDS</h3>
+                        <p>Your cards hold all the information you&rsquo;ll need to use them in the game. Let&rsquo;s take a look at how that information is laid out.</p>
+
+                        <p></p>
+
+                        <p>1.&nbsp; The name of the card can be found at the top of the card. Whenever you cast a spell, tell your opponent which card it is.</p>
+
+                        <p></p>
+
+                        <p>2.&nbsp; Next to the card&rsquo;s name is its mana cost. This tells you how much mana it costs to cast that card.</p>
+
+                        <p></p>
+
+                        <p>3.&nbsp; In the middle, you&rsquo;ll find the card type. When in doubt, take a look at the middle of the card to find out what type of card (creature, sorcery, enchantment, etc.) you&rsquo;re dealing with.</p>
+
+                        <p></p>
+
+                        <p>4.&nbsp; That symbol on the right side of the middle bar is the card&rsquo;s expansion symbol. Magic has released over 60 expansion sets in its 20-year history, and the expansion symbol tells you which set the card is from. The color of the expansion symbol tells you how rare the card is. Black expansion symbols are fairly common, while gold symbols are rare.</p>
+
+                        <p></p>
+
+                        <p>5.&nbsp; The box covering most of the bottom half of the card contains the card&rsquo;s abilities. This is where you&rsquo;ll learn what the card does in the game. Some cards have italicized flavor text, a look into the characters and worlds of Magic.</p>
+
+                        <p></p>
+
+                        <p>6.&nbsp; If the card is a creature, it will have two numbers near the bottom. The number before the slash is its power, or how much damage it deals in combat. The number after the slash is its toughness, how much damage must be dealt to it in a single turn to destroy it.</p>
+
+                        <p></p>
+
+                        <p>7.&nbsp; Finally, the very bottom of the card contains collector information. You&rsquo;ll see the card&rsquo;s collector number and illustration credit.</p>
+
+                        <p></p>
+
+                        <p>This tour of a Magic card concludes with a few examples.</p>
+                    </div>
+                    <div class="image-article">
+                        <img src="http://magic.wizards.com/sites/mtg/files/images/featured/EN_TimeStartGame_ReadCardsPt1_TallRotator.png"></div>
+                </dd>
+            </dl></div>
+
+
+    </div>
+
+        {% endblock %}
