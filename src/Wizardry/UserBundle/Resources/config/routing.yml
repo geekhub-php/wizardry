@@ -10,3 +10,34 @@ _sonata_admin:
     resource: .
     type: sonata_admin
     prefix: /admin
+
+index_page:
+    pattern:  /
+    defaults: { _controller: "WizardryUserBundle:Default:index" }
+
+app_block_show:
+    pattern:  /block/{id}
+    defaults: { _controller: "WizardryUserBundle:Block:show" }
+
+
+app_set_show:
+    pattern:  /set/{id}
+    defaults: { _controller: "WizardryUserBundle:Set:show" }
+
+app_card_show:
+    pattern:  /card/{id}
+    defaults: { _controller: "WizardryUserBundle:Card:show" }
+
+app_page_about:
+    pattern:  /about
+    defaults: { _controller: "WizardryUserBundle:Page:about" }
+
+app_page_rules:
+    pattern:  /rules
+    defaults: { _controller: "WizardryUserBundle:Page:rules" }
+
+app_page_gameplay:
+    pattern:  /gameplay
+    defaults: { _controller: "WizardryUserBundle:Page:gameplay" }
+
+

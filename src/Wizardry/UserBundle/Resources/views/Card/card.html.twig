@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ asset('../../assets/img/EN_CardSetArchive_Header_1.jpg') }}" alt="About">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>CARD INFORMATION</h1>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.carousel -->
+
+    <div class="container marketing">
+
+    <div class="row featurette" style="padding-top: 40px">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/312x445/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">{{ card.name }}</h2>
+            <p class="lead">
+            <p>type: {{ card.type }}</p>
+            <p>Mana Cost: {{ card.manacost }}</p>
+            <p>Converted Mana Cost: {{ card.convertedmanacost }}</p>
+            <p>sub type: {{ card.subtype }}</p>
+            <p>rarity: {{ card.rarity }}</p>
+            <p>"{{ card.description }}"</p>
+            <p>- {{ card.artdescription }}</p>
+            <p>Illus. {{ card.artist }}</p>
+            </p>
+        </div>
+    </div>
+
+
+{% endblock %}

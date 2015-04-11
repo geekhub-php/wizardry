@@ -1,12 +1,10 @@
 Wizardry
 ========================
 
-##Welcome to the MTG card catalog (formerly Soy)
-Here we need to describe some information about project
+##Welcome to the MTG card catalog
 
 
-##Charity project for Cherkassy Drama Theatre
-Theirs new outstanding website!
+More information about MTG(Magic: The Gathering) on [Wikipedia](http://en.wikipedia.org/wiki/Magic:_The_Gathering).
 
 
 ##Installation
