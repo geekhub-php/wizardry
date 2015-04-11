@@ -1,5 +1,5 @@
 _wizardry:
-    resource: "@WizardryMainBundle/Resources/config/routing.yml"
+    resource: "@WizardryUserBundle/Resources/config/routing.yml"
     prefix:   /
 
 _wizardry_api:

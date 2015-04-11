@@ -1,0 +1,41 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ asset('../../assets/img/EN_C14_InlineR_A.jpg') }}" alt="About">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>SET LIST</h1>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.carousel -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="padding-top: 40px">
+            {% for doc in block.setcontain %}
+                <div class="col-lg-4">
+                    <h2>{{ doc.name }}</h2>
+                    <p>short name: {{ doc.shortname }}</p>
+                    <p><a class="btn btn-default" href="{{ path('app_set_show', { 'id': doc.id }) }}" role="button">View set &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+
+        {% endblock %}

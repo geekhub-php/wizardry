@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %}
+
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/set.css') }}" type="text/css" media="all">
+    {% endblock %}
+
+
+    {% block content %}
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <!-- Carousel
+         ================================================== -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{ asset('../../assets/img/EN_DTK_InlineR_A.jpg') }}" alt="About">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>CARD LIST</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.carousel -->
+
+        <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="padding-top: 40px">
+            {% for doc in set.cardcontain %}
+                <div class="col-lg-4">
+                    <h2>{{ doc.name }}</h2>
+                    <p>type: {{ doc.type }}</p>
+                    <p>sub type: {{ doc.subtype }}</p>
+                    <p>rarity: {{ doc.rarity }}</p>
+                    <p><a class="btn btn-default" href="{{ path('app_card_show', { 'id': doc.id }) }}" role="button">View card &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+
+{% endblock %}

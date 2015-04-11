@@ -4,10 +4,19 @@ namespace Wizardry\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Doctrine\ODM\MongoDB\DocumentRepository;
+
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('WizardryUserBundle:Default:index.html.twig', array('name' => $name));
+
+        $blocks = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Block')
+            ->findAll();
+
+        return $this->render('WizardryUserBundle:Block:index.html.twig', array(
+            'blocks' => $blocks,
+        ));
     }
 }

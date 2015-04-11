@@ -1,0 +1,75 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/wizardrymain/css/block.css') }}" type="text/css" media="all">
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{ asset('../../assets/img/EN_Colors01_intro_InlineR_A.jpg') }}" alt="About">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>ABOUT THE GAME</h1>
+                        <p>In Magic: The Gathering, you are counted among the elite spellcasters of the Multiverse—the Planeswalkers. Your deck of cards represents your weapons, containing the spells you know and the creatures you can summon to fight for you.</p>
+                        <p><a class="btn btn-lg btn-warning" href="/about" role="button" >Read</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ asset('../../assets/img/EN_Deckbuilding_InlineR_A.jpg') }}" alt="Rules">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>COMPREHENSIVE RULES</h1>
+                        <p>A comprehensive document outlining each facet of the rules became necessary. This document is known as Magic’s Comprehensive Rulebook. It’s meant to be consulted when specific rules questions come into play and neither the tournament’s organizers nor judges have the answer.</p>
+                        <p><a class="btn btn-lg btn-warning" href="/rules" role="button" style="z-index: 99">Start</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ asset('../../assets/img/EN_CardSetArchive_inlineR_A_1.jpg') }}" alt="Play">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>HOW TO PLAY</h1>
+                        <p>Read this game info and play with your friends around your kitchen table, or join your local Magic community.</p>
+                        <p><a class="btn btn-lg btn-warning" href="/gameplay" role="button"  style="z-index: 99">Play</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            {% for doc in blocks %}
+                <div class="col-lg-4">
+
+                    <h2>{{ doc.name }}</h2>
+                     <p><a class="btn btn-default" href="{{ path('app_block_show', { 'id': doc.id }) }}" role="button">View block &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+
+
+{% endblock %}
