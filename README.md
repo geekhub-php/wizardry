@@ -15,7 +15,7 @@ http://symfony.com/doc/current/book/installation.html
 If you want to install the project, you have to follow next steps:
 
      Clone the repo git clone
-    1. https://github.com/geekhub-php/wizardry.git <directory_name>
+    1. git clone -b develop https://github.com/geekhub-php/wizardry.git
 
      Go to the project root
     2. cd wizardry
@@ -23,13 +23,11 @@ If you want to install the project, you have to follow next steps:
      Install dependencies, run
     3. composer install
     (If you do not yet have composer, install it)
-    curl -s http://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin
-
-     Pull the changes form origin
-    4. git checkout origin/develop git pull origin develop
+    curl -sS https://getcomposer.org/installer | php
+    sudo mv composer.phar /usr/local/bin/composer
 
      And run the reload
-    5. php bin/reload
+    4. php app/reload.php
 
     ...
 
@@ -53,7 +51,7 @@ If you have found bug, please create an issue.
 ##Authors
 -------
 
-CheTheatre was originally created by [Geekhub Project Team](http://geekhub.ck.ua).
+Wizardry was originally created by [Geekhub Project Team](http://geekhub.ck.ua).
 
 [1]:  http://geekhub.ck.ua/
 
