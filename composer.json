@@ -31,7 +31,8 @@
         "components/jquery": "1.11.1",
         "sonata-project/user-bundle": "2.3.*@dev",
         "sonata-project/datagrid-bundle": "2.2.*@dev",
-        "sonata-project/easy-extends-bundle": "~2.1"
+        "sonata-project/easy-extends-bundle": "~2.1",
+        "guzzlehttp/guzzle": "~3.7"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
