@@ -11,7 +11,12 @@ class CardsController extends Controller
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Returns a collection of Cards"
+     *  description="Returns a collection of Cards",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @return array
@@ -30,7 +35,12 @@ class CardsController extends Controller
 
     /**
      * @ApiDoc(
-     *  description="Returns a single Card"
+     *  description="Returns a single Card",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @View()

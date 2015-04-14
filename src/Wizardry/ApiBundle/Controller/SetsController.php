@@ -11,7 +11,12 @@ class SetsController extends Controller
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Returns a collection of Sets"
+     *  description="Returns a collection of Sets",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @return array
@@ -30,7 +35,12 @@ class SetsController extends Controller
 
     /**
      * @ApiDoc(
-     *  description="Returns a single Set"
+     *  description="Returns a single Set",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @param string $id Set ID

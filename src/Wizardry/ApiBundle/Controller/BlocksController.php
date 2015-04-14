@@ -11,7 +11,12 @@ class BlocksController extends Controller
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Returns a collection of Blocks"
+     *  description="Returns a collection of Blocks",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @return array
@@ -30,7 +35,12 @@ class BlocksController extends Controller
 
     /**
      * @ApiDoc(
-     *  description="Returns a single Block"
+     *  description="Returns a single Block",
+     *  statusCodes={
+     *  200="Returned when all parameters were correct",
+     *  404="Returned when documents are not found",
+     *  500="Returned when MongoDB not run or another error",
+     *  },
      * )
      *
      * @param string $id Block ID
