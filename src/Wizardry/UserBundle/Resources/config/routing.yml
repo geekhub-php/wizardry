@@ -39,5 +39,3 @@ app_page_rules:
 app_page_gameplay:
     pattern:  /gameplay
     defaults: { _controller: "WizardryUserBundle:Page:gameplay" }
-
-

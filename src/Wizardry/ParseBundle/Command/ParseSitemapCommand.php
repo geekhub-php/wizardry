@@ -4,19 +4,15 @@ namespace Wizardry\ParseBundle\Command;
 
 use Wizardry\ParseBundle\Document\SiteUrl;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-//use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Doctrine\ODM\MongoDB\Tools\Console\Command;
-use Doctrine\ODM\MongoDB\Tools\Console;
 
 class ParseSitemapCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
         $this
-//            ->setName('soy:parse:sitemap')
             ->setName('parse:sitemap')
             ->setDescription('Parse sitemap of magiccards.info')
             ->addOption(
