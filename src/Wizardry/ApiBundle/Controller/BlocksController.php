@@ -6,12 +6,12 @@ use FOS\RestBundle\Controller\Annotations\View;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class SetsController extends Controller
+class BlocksController extends Controller
 {
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Returns a collection of Sets",
+     *  description="Returns a collection of Blocks",
      *  statusCodes={
      *  200="Returned when all parameters were correct",
      *  404="Returned when documents are not found",
@@ -22,20 +22,20 @@ class SetsController extends Controller
      * @return array
      * @View()
      */
-    public function getSetsAction()
+    public function getBlocksAction()
     {
-        $sets = $this->get('doctrine_mongodb')
-            ->getRepository('WizardryMainBundle:Set')
+        $blocks = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Block')
             ->findAll();
 
         return [
-            'sets' => $sets,
+            'blocks' => $blocks,
         ];
     }
 
     /**
      * @ApiDoc(
-     *  description="Returns a single Set",
+     *  description="Returns a single Block",
      *  statusCodes={
      *  200="Returned when all parameters were correct",
      *  404="Returned when documents are not found",
@@ -43,23 +43,23 @@ class SetsController extends Controller
      *  },
      * )
      *
-     * @param string $id Set ID
+     * @param string $id Block ID
      *
      * @return array
      * @View()
      */
-    public function getSetAction($id)
+    public function getBlockAction($id)
     {
-        $set = $this->get('doctrine_mongodb')
-            ->getRepository('WizardryMainBundle:Set')
+        $block = $this->get('doctrine_mongodb')
+            ->getRepository('WizardryMainBundle:Block')
             ->find($id);
 
-        if (!$set) {
+        if (!$block) {
             throw $this->createNotFoundException();
         }
 
         return [
-            'set' => $set,
+            'block' => $block,
         ];
     }
 }
