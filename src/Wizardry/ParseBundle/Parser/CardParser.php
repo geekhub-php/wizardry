@@ -47,6 +47,18 @@ class CardParser
     public function getCardType()
     {
         $type_mana = $this->crawler->filter('body > table[style="margin: 0 0 0.5em 0;"] > tr >  td[valign="top"][style="padding: 0.5em;"][width="70%"] > p')->first()->text();
+        $type = substr($type_mana, 0, strpos($type_mana, ' — '));
+
+        if (strlen($type == null)) {
+            $type = trim($type_mana);
+        }
+
+        return $type;
+    }
+
+    public function getCardSubType()
+    {
+        $type_mana = $this->crawler->filter('body > table[style="margin: 0 0 0.5em 0;"] > tr >  td[valign="top"][style="padding: 0.5em;"][width="70%"] > p')->first()->text();
         $type = substr($type_mana, 0, strpos($type_mana, ','));
 
         if (strlen($type == null)) {
@@ -135,7 +147,20 @@ class CardParser
         return $image;
     }
 
-    public function getCardMana()
+    public function getCardManaCost()
+    {
+        $type_mana = $this->crawler->filter('body > table[style="margin: 0 0 0.5em 0;"] > tr >  td[valign="top"][style="padding: 0.5em;"] > p')->first()->text();
+        if (strpos($type_mana, ',') != false) {
+            $mana = substr($type_mana, strpos($type_mana, ',')+1);
+            $mana = trim($mana);
+        } else {
+            $mana = null;
+        }
+
+        return $mana;
+    }
+
+    public function getCardConvertedManaCost()
     {
         $type_mana = $this->crawler->filter('body > table[style="margin: 0 0 0.5em 0;"] > tr >  td[valign="top"][style="padding: 0.5em;"] > p')->first()->text();
         if (strpos($type_mana, ',') != false) {
@@ -153,12 +178,15 @@ class CardParser
         $cardData = array(
             'name' => $this->getCardName(),
             'type' => $this->getCardType(),
+            'subType' => $this->getCardSubType(),
             'rarity' => $this->getCardRarity(),
             'set' => $this->getCardSet(),
             'artist' => $this->getCardArtist(),
-            'text' => $this->getCardText(),
+            'description' => $this->getCardText(),
+            'artDescription' => $this->getCardText(),
             'image' => $this->getCardImage(),
-            'mana' => $this->getCardMana(),
+            'manaCost' => $this->getCardManaCost(),
+            'convertedManaCost' => $this->getCardConvertedManaCost(),
             'power' => $this->getCardPower(),
             'toughness' => $this->getCardToughness(),
             'otherPart' => $this->getCardOtherPart(),
